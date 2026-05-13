@@ -1,0 +1,219 @@
+{
+  "Navbar": {
+    "brandName": "The Burger House",
+    "tagline": "& Crunchy Fried Chicken",
+    "navigations": [
+      { "name": "Home", "href": "/" },
+      { "name": "Menu", "href": "/menu" },
+      { "name": "About Us", "href": "/about" },
+      { "name": "Gallery", "href": "/gallery" },
+      { "name": "Contact", "href": "/contact" }
+    ],
+    "mobileMenuHeading": "Menu",
+    "callToOrder": "Call us to order",
+    "openingHours": "Open daily 7:00 AM – 10:00 PM"
+  },
+  "HomePage": {
+    "Hero": {
+      "locationBadge": "Now Serving in Byas, Damauli",
+      "headline": "Burgers. Fried Chicken. Good Vibes.",
+      "subheadline": "Damauli's beloved fast-food sanctuary. Experience local street food with a modern, urban aesthetic.",
+      "ctaPrimary": "View Full Menu",
+      "ctaSecondary": "Visit Us Today",
+      "bgImage": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&q=80&w=2000"
+    },
+    "About": {
+      "badge": "Our Journey",
+      "title": "More Than Just Great Food",
+      "description": "Step into a space designed for connection. Whether you're sinking into our cozy wicker egg-chairs or enjoying the evening breeze from our rooftop, we offer an experience that's both grounding and energetic.\n\nOur vibrant Buddha murals and subtle LED glows mirror our unique blend of traditional hospitality and modern urban hangout.",
+      "experienceYears": "5+",
+      "experienceLabel": "Years of Serving Damauli Quality",
+      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
+      "features": [
+        "Vibrant Buddha Mural Interior",
+        "Cozy Wicker Egg-Chairs",
+        "Rooftop Dining Space",
+        "Family Friendly Ambiance",
+        "Fresh Locally Sourced Ingredients"
+      ]
+    },
+    "Categories": {
+      "badge": "Something for Everyone",
+      "titlePart1": "Explore our ",
+      "titlePart2": "Flavors.",
+      "viewAll": "View Full Menu",
+      "items": [
+        {
+          "name": "Crunchy Burgers",
+          "description": "Signature crispy patties with secret sauce.",
+          "slug": "burgers",
+          "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800"
+        },
+        {
+          "name": "Fried Chicken",
+          "description": "Golden, crispy, and juicy local favorites.",
+          "slug": "fried-chicken",
+          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800"
+        },
+        {
+          "name": "Local Specials",
+          "description": "Street food elevated for the urban palate.",
+          "slug": "local-specials",
+          "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?q=80&w=800"
+        }
+      ]
+    },
+    "Combos": {
+      "badge": "Bigger. Crunchier. Better Value.",
+      "title": "Value Combo Deals",
+      "bestSeller": "Best Value",
+      "currency": "Rs.",
+      "plusFree": "Get Free",
+      "items": [
+        {
+          "id": "pack-1",
+          "title": "Combo Pack-1",
+          "price": "750",
+          "contents": "Chicken Steam Momo, Chicken Chowmein, Chicken Burger",
+          "free": "French Fries, Coke 250 ml",
+          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
+          "isFamily": false
+        },
+        {
+          "id": "pack-2",
+          "title": "Combo Pack-2",
+          "price": "1199",
+          "contents": "Hot Wings, Cheese Pizza, Chicken Burger",
+          "free": "French Fries, Coke 500 ml",
+          "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
+          "isFamily": false
+        },
+        {
+          "id": "pack-3",
+          "title": "Combo Pack-3",
+          "price": "1199",
+          "contents": "Chicken Biryani, Chicken Momo, Cheese Pizza",
+          "free": "French Fries, Coke 500 ml",
+          "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800",
+          "isFamily": false
+        },
+        {
+          "id": "pack-4",
+          "title": "Combo Pack-4",
+          "price": "1759",
+          "contents": "C.F.C. 4 pcs, Cheese Pizza, Chicken Steam Momo",
+          "free": "French Fries, Coke Jumbo 2 ltr.",
+          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800",
+          "isFamily": false
+        },
+        {
+          "id": "family-pack",
+          "title": "Family Combo",
+          "price": "2399",
+          "contents": "Chicken Biryani, Chicken Momo, Chicken Chowmein, Cheese Pizza, C.F.C., French Fries, Chicken Chilly",
+          "free": "Coke Jumbo 2 ltr.",
+          "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=1200",
+          "isFamily": true
+        }
+      ]
+    },
+    "Contact": {
+      "badge": "Get In Touch",
+      "title": "Visit the ",
+      "titleHighlight": "House.",
+      "description": "Whether you're craving a late-night burger or planning a rooftop hangout with friends, we're ready to serve you the best vibes in Damauli.",
+      "phone": "+977-9814177147",
+      "address": "Damauli, Tanahun (Near Main Chowk)",
+      "hours": "10:00 AM - 10:00 PM",
+      "deliveryNote": "Free Delivery within 2km of Damauli Chowk!",
+      "labels": {
+        "location": "Our Location",
+        "call": "Call Us",
+        "hours": "Opening Hours",
+        "order": "Order Online",
+        "actions": {
+          "maps": "Open in Maps",
+          "call": "Call Now",
+          "menu": "View Menu",
+          "orderBtn": "Order Now"
+        }
+      }
+    },
+    "Gallery": {
+      "badge": "The Vibe Gallery",
+      "title": "Captured ",
+      "titleHighlight": "Moments.",
+      "instagramHandle": "@burger_houseandcfc__damauli",
+      "instagramCta": "View More on Instagram",
+      "imageTag": "Damauli Standard",
+      "images": [
+        {
+          "src": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800",
+          "alt": "Signature Crunchy Burger"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
+          "alt": "Cheesy Pizza Special"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1562059390-a761a084768e?q=80&w=800",
+          "alt": "Urban Hangout Spot"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
+          "alt": "Crunchy Fried Chicken"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800",
+          "alt": "The Interior Glow"
+        },
+        {
+          "src": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=800",
+          "alt": "Rooftop Vibe"
+        }
+      ]
+    },
+    "Testimonials": {
+      "badge": "Love from Damauli",
+      "title": "The Talk of the ",
+      "titleHighlight": "Town.",
+      "verifiedLabel": "Verified Customer",
+      "reviews": [
+        {
+          "name": "Anish Shrestha",
+          "rating": 5,
+          "comment": "Best burger in Damauli! The crunchy chicken is actually crunchy, and the rooftop vibe is perfect for hangouts.",
+          "image": "https://i.pravatar.cc/150?u=anish"
+        },
+        {
+          "name": "Priyanka Thapa",
+          "rating": 5,
+          "comment": "The interior is so beautiful with the Buddha mural. It's my favorite spot for a quick lunch or a weekend treat.",
+          "image": "https://i.pravatar.cc/150?u=priyanka"
+        },
+        {
+          "name": "Siddharth KC",
+          "rating": 4,
+          "comment": "Great value for money. The combo deals are a lifesaver when you're with a group of friends.",
+          "image": "https://i.pravatar.cc/150?u=siddharth"
+        }
+      ]
+    }
+  },
+  "footer": {
+    "description": "Damauli's favorite spot for premium burgers and the crunchiest fried chicken. Elevating local food to a whole new level.",
+    "quick-links": "Quick Nav",
+    "contact-us": "Get in Touch",
+    "hours": "10:00 AM - 9:00 PM",
+    "deliveryNote": "Delivery available within Damauli",
+    "phoneNumber": "+977-9814177147",
+    "whatsAppCTA": {
+      "title": "Hungry Now?",
+      "description": "Chat with us on WhatsApp for fast delivery or to book a table at our rooftop.",
+      "button": "Order on WhatsApp"
+    },
+    "rights": "All rights reserved.",
+    "madeWith": "Crafted with",
+    "forDamauli": "for Damauli"
+  }
+}

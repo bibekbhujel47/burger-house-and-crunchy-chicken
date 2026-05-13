@@ -1,26 +1,215 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* ─── Brand Colors ─────────────────────────────────── */
+  --color-primary:           #570000;
+  --color-primary-container: #800000;
+  --color-primary-light:     #7a0000;
+  --color-secondary:         #E8A800;
+  --color-accent:           #E8A800;
+
+  /* ─── Neutral / Surface ────────────────────────────── */
+  --color-bg-offwhite:        #fff8f6;
+  --color-bg-dark:            #1A0000;
+  --color-surface:            #ffffff;
+  --color-on-surface:         #261816;
+  --color-on-surface-variant: #5a413d;
+  --color-border:             #e8d5d0;
+
+  /* ─── Ambiance Accents ─────────────────────────────── */
+  --color-electric-blue: #002556;
+  --color-emerald-green: #00563b;
+
+  /* ─── Typography ───────────────────────────────────── */
+  --font-display: var(--font-montserrat), "Montserrat", sans-serif;
+  --font-body:    var(--font-open-sans),  "Open Sans",  sans-serif;
+
+  /* ─── Shadows ──────────────────────────────────────── */
+  --shadow-card:       0 4px 24px rgba(87, 0, 0, 0.10);
+  --shadow-card-hover: 0 8px 40px rgba(87, 0, 0, 0.18);
+  --shadow-glow:       0 0 16px rgba(255, 215, 0, 0.35);
+  --shadow-led:        0 0 20px rgba(0, 37, 86, 0.25);
+
+  /* ─── Easing ───────────────────────────────────────── */
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ═══════════════════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════════════════ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
+
+  body {
+    @apply bg-bg-offwhite text-on-surface;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply font-black;
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background-color: #FFD700;
+    color: #570000;
+  }
+
+  :focus-visible {
+    outline: 2px solid #FFD700;
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar       { width: 6px; }
+  ::-webkit-scrollbar-track { background: #fff8f6; }
+  ::-webkit-scrollbar-thumb { background: #800000; border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: #570000; }
+
+  a   { @apply transition-colors; text-decoration: none; }
+  img { display: block; max-width: 100%; }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ═══════════════════════════════════════════════════════
+   COMPONENTS — no chained @apply of custom classes
+═══════════════════════════════════════════════════════ */
+@layer components {
+
+  /* ── Navbar glass ──────────────────────────────────── */
+  .navbar-glass {
+    background: rgba(255, 248, 246, 0.92);
+    backdrop-filter: blur(12px) saturate(1.4);
+    -webkit-backdrop-filter: blur(12px) saturate(1.4);
+    border-bottom: 1px solid rgba(87, 0, 0, 0.08);
+  }
+
+  /* ── Nav underline glow ────────────────────────────── */
+  .nav-active-underline {
+    @apply absolute -bottom-1 left-0 h-0.5 bg-secondary;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+  }
+
+  /* ── Section heading — single class, no chaining ───── */
+  .section-heading {
+    @apply text-3xl font-black uppercase tracking-tight;
+  }
+
+  /* ── Gold divider ──────────────────────────────────── */
+  .gold-divider {
+    @apply h-1 w-16 rounded-full bg-secondary;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  }
+
+  /* ── Card ──────────────────────────────────────────── */
+  .card {
+    @apply rounded-2xl overflow-hidden bg-white;
+    box-shadow: var(--shadow-card);
+    transition: box-shadow 0.3s var(--ease-smooth),
+                transform   0.3s var(--ease-smooth);
+  }
+  .card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+  }
+
+  /* ── Buttons ───────────────────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-full bg-primary px-6 py-3
+           text-sm font-black uppercase tracking-widest text-secondary
+           transition-all duration-300;
+  }
+  .btn-primary:hover {
+    @apply bg-primary-container;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-full bg-secondary px-6 py-3
+           text-sm font-black uppercase tracking-widest text-primary
+           transition-all duration-300;
+  }
+  .btn-secondary:hover {
+    filter: brightness(0.95);
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-1px);
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2
+           rounded-full border-2 border-secondary px-6 py-3
+           text-sm font-black uppercase tracking-widest text-secondary
+           transition-all duration-300;
+  }
+  .btn-outline:hover {
+    @apply bg-secondary text-primary;
+  }
+
+  /* ── Price badge ───────────────────────────────────── */
+  .price-badge {
+    @apply inline-block rounded-full bg-secondary
+           px-3 py-0.5 text-sm font-black text-primary;
+  }
+
+  /* ── Veg / non-veg dots ────────────────────────────── */
+  .dot-veg {
+    @apply inline-block h-3 w-3 rounded-sm border-2 border-green-600;
+    background: radial-gradient(circle at center, #16a34a 40%, transparent 41%);
+  }
+  .dot-nonveg {
+    @apply inline-block h-3 w-3 rounded-sm border-2 border-red-600;
+    background: radial-gradient(circle at center, #dc2626 40%, transparent 41%);
+  }
+
+  /* ── Section backgrounds ───────────────────────────── */
+  .section-light  { @apply bg-bg-offwhite; }
+  .section-dark   { background: linear-gradient(135deg, #1A0000 0%, #3b0000 100%); }
+  .section-maroon { background: linear-gradient(135deg, #570000 0%, #800000 100%); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   UTILITIES
+═══════════════════════════════════════════════════════ */
+@layer utilities {
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    background-size: 200% auto;
+    animation: goldShimmer 3s linear infinite;
+  }
+
+  .animate-fade-up    { animation: fadeUp    0.6s var(--ease-smooth) both; }
+  .animate-fade-in    { animation: fadeIn    0.5s var(--ease-smooth) both; }
+  .animate-pulse-glow { animation: pulseGlow 2.5s ease-in-out infinite; }
+}
+
+/* ═══════════════════════════════════════════════════════
+   KEYFRAMES
+═══════════════════════════════════════════════════════ */
+@keyframes goldShimmer {
+  from { background-position:   0% center; }
+  to   { background-position: 200% center; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+  50%       { box-shadow: 0 0 24px rgba(255, 215, 0, 0.7); }
 }
