@@ -86,8 +86,10 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
                 src={image}
                 alt="The Burger House Interior vibe"
                 fill
+                unoptimized={true}
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
+                quality={100}
               />
             </div>
 

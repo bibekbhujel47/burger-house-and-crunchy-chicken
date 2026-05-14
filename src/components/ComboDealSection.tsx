@@ -59,6 +59,7 @@ export function ComboDealSection({
                 <Image
                   src={pack.image}
                   alt={pack.title}
+                  unoptimized={true}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                   /* 

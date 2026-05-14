@@ -84,17 +84,17 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
                 href={`/menu?category=${cat.slug}`}
                 className="group block relative"
               >
-                <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] bg-zinc-100 shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
+                <div className="relative aspect-[4/5] rounded-[2.5rem] shadow-xl transition-all duration-500 group-hover:shadow-2xl group-hover:-translate-y-2">
                   <Image
                     src={cat.image}
                     alt={cat.name}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 33vw, 400px"
+                    unoptimized={true}
+                    className="object-cover rounded-[2.5rem] transition-transform duration-700 group-hover:scale-105"
+                    quality={100}
+                    sizes="(max-width: 768px) 100vw, 33vw"
                   />
-
-                  <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent opacity-80" />
-
+                  <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent opacity-80" />
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
                     <h3 className="text-3xl font-black text-white mb-2 tracking-tight group-hover:text-yellow-400 transition-colors">
                       {cat.name}
@@ -103,7 +103,6 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
                       {cat.description}
                     </p>
                   </div>
-
                   <div className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/20 group-hover:bg-yellow-400 group-hover:text-black group-hover:border-transparent transition-all duration-300">
                     <ArrowUpRight size={20} />
                   </div>

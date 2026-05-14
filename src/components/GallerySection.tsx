@@ -89,6 +89,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
                   alt={img.alt}
                   width={800}
                   height={1000}
+                  unoptimized={true}
                   className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />

@@ -28,7 +28,7 @@
       "description": "Step into a space designed for connection. Whether you're sinking into our cozy wicker egg-chairs or enjoying the evening breeze from our rooftop, we offer an experience that's both grounding and energetic.\n\nOur vibrant Buddha murals and subtle LED glows mirror our unique blend of traditional hospitality and modern urban hangout.",
       "experienceYears": "5+",
       "experienceLabel": "Years of Serving Damauli Quality",
-      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
+      "image": "/frontImage.webp",
       "features": [
         "Vibrant Buddha Mural Interior",
         "Cozy Wicker Egg-Chairs",
@@ -47,19 +47,19 @@
           "name": "Crunchy Burgers",
           "description": "Signature crispy patties with secret sauce.",
           "slug": "burgers",
-          "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800"
+          "image": "/crunchyBurger.webp"
         },
         {
           "name": "Fried Chicken",
           "description": "Golden, crispy, and juicy local favorites.",
           "slug": "fried-chicken",
-          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800"
+          "image": "/friedChicken.webp"
         },
         {
-          "name": "Local Specials",
-          "description": "Street food elevated for the urban palate.",
-          "slug": "local-specials",
-          "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?q=80&w=800"
+          "name": "Cheesy Crust Pizza",
+          "description": "Crispy base, molten cheese, and bold flavors baked to perfection.",
+          "slug": "cheesy-crust-pizza",
+          "image": "/pizza.webp"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "price": "750",
           "contents": "Chicken Steam Momo, Chicken Chowmein, Chicken Burger",
           "free": "French Fries, Coke 250 ml",
-          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
+          "image": "/combo1.webp",
           "isFamily": false
         },
         {
@@ -85,7 +85,7 @@
           "price": "1199",
           "contents": "Hot Wings, Cheese Pizza, Chicken Burger",
           "free": "French Fries, Coke 500 ml",
-          "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
+          "image": "/combo2.webp",
           "isFamily": false
         },
         {
@@ -94,7 +94,7 @@
           "price": "1199",
           "contents": "Chicken Biryani, Chicken Momo, Cheese Pizza",
           "free": "French Fries, Coke 500 ml",
-          "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800",
+          "image": "/combo3.webp",
           "isFamily": false
         },
         {
@@ -103,7 +103,7 @@
           "price": "1759",
           "contents": "C.F.C. 4 pcs, Cheese Pizza, Chicken Steam Momo",
           "free": "French Fries, Coke Jumbo 2 ltr.",
-          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800",
+          "image": "/combo4.webp",
           "isFamily": false
         },
         {
@@ -148,28 +148,28 @@
       "imageTag": "Damauli Standard",
       "images": [
         {
-          "src": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800",
-          "alt": "Signature Crunchy Burger"
+          "src": "/keemaNoodles.webp",
+          "alt": "Spicy Keema Noodles with Minced Meat and Scallions"
         },
         {
           "src": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
           "alt": "Cheesy Pizza Special"
         },
         {
-          "src": "https://images.unsplash.com/photo-1562059390-a761a084768e?q=80&w=800",
-          "alt": "Urban Hangout Spot"
+          "src": "/receptionist.webp",
+          "alt": "Our Receptionist"
         },
         {
           "src": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
           "alt": "Crunchy Fried Chicken"
         },
         {
-          "src": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800",
+          "src": "/aesthetic.webp",
           "alt": "The Interior Glow"
         },
         {
-          "src": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=800",
-          "alt": "Rooftop Vibe"
+          "src": "/people.webp",
+          "alt": "Urban Hangout Spot"
         }
       ]
     },
