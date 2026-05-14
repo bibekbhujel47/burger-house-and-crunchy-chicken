@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import buildWhatsAppURL from "@/app/utils/whatsApp";
+import SITE_DATA from "@/constants";
 
 interface ContactSectionProps {
   badge: string;
@@ -53,7 +54,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       title: labels.location,
       value: address,
       action: labels.actions.maps,
-      link: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`,
+      link: SITE_DATA.burgerHouseGoogleMapLink,
     },
     {
       icon: <Phone size={28} />,
@@ -67,7 +68,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       title: labels.hours,
       value: hours,
       action: labels.actions.menu,
-      link: "/menu",
+      link: "",
     },
   ];
 

@@ -15,8 +15,6 @@ export default function Footer() {
     href: string;
   }>;
 
-  const phone = t("footer.phoneNumber");
-
   // Updated Facebook link with your specific Damauli page URL
   const socialLinks = [
     {
@@ -107,7 +105,9 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-4">
                 <Phone size={18} className="shrink-0 text-accent" />
-                <span className="text-sm text-white/60">{phone}</span>
+                <span className="text-sm text-white/60">
+                  {SITE_DATA.phoneNumber}
+                </span>
               </div>
               <div className="flex items-start gap-4">
                 <Clock size={18} className="mt-0.5 shrink-0 text-accent" />
