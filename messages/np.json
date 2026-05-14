@@ -76,6 +76,7 @@
           "price": "७५०",
           "contents": "चिकेन स्टिम मःमः, चिकेन चाउमिन, चिकेन बर्गर",
           "free": "फ्रेन्च फ्राइज, कोक २५० मि.लि.",
+          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
           "isFamily": false
         },
         {
@@ -84,6 +85,7 @@
           "price": "११९९",
           "contents": "हट विङ्स, चिज पिज्जा, चिकेन बर्गर",
           "free": "फ्रेन्च फ्राइज, कोक ५०० मि.लि.",
+          "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
           "isFamily": false
         },
         {
@@ -92,6 +94,7 @@
           "price": "११९९",
           "contents": "चिकेन बिरयानी, चिकेन मःमः, चिज पिज्जा",
           "free": "फ्रेन्च फ्राइज, कोक ५०० मि.लि.",
+          "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800",
           "isFamily": false
         },
         {
@@ -100,6 +103,7 @@
           "price": "१७५९",
           "contents": "C.F.C. ४ पिस, चिज पिज्जा, चिकेन स्टिम मःमः",
           "free": "फ्रेन्च फ्राइज, कोक जम्बो २ लि.",
+          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800",
           "isFamily": false
         },
         {
@@ -108,6 +112,7 @@
           "price": "२३९९",
           "contents": "चिकेन बिरयानी, चिकेन मःमः, चिकेन चाउमिन, चिज पिज्जा, C.F.C., फ्रेन्च फ्राइज, चिकेन चिली",
           "free": "कोक जम्बो २ लि.",
+          "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=1200",
           "isFamily": true
         }
       ]
@@ -210,5 +215,617 @@
     "rights": "सबै अधिकार सुरक्षित।",
     "madeWith": "मायाका साथ",
     "forDamauli": "दमौलीका लागि निर्माण गरिएको"
+  },
+  "MenuPage": {
+    "badge": "दैनिक ताजा परिकार",
+    "titlePart1": "हाम्रो",
+    "titlePart2": "पूर्ण मेनु",
+    "specialLabel": "विशेष",
+    "currency": "रु.",
+    "footerNote": "सबै मूल्यहरू NPR मा छन्। मेनु परिवर्तन हुन सक्छ। दमौलीमा नि:शुल्क होम डेलिभरी उपलब्ध छ।",
+    "categories": [
+      {
+        "id": "burger-house-special",
+        "title": "बी.एच. विशेष",
+        "items": [
+          { "name": "चिकेन सावरमा", "price": "350", "isSpecial": true },
+          {
+            "name": "क्रिस्पी श्रेडेड चिकेन",
+            "price": "450",
+            "isSpecial": true
+          },
+          { "name": "ड्रागन चिकेन", "price": "450", "isSpecial": true },
+          { "name": "चिकेन ६५", "price": "450", "isSpecial": true },
+          { "name": "चटपटे", "price": "250", "isSpecial": false },
+          { "name": "चिज बल", "price": "300", "isSpecial": false },
+          { "name": "चिकेन स्पाइरल", "price": "450", "isSpecial": false },
+          { "name": "चिकेन साटे", "price": "400", "isSpecial": false },
+          { "name": "सिजलिङ विङ्ग्स", "price": "450", "isSpecial": false },
+          { "name": "किमा नुडल्स", "price": "250", "isSpecial": false },
+          { "name": "स्पाइसी सेजवान चिकेन", "price": "450", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "crunchy-fried-chicken",
+        "title": "फ्राईड चिकेन",
+        "items": [
+          { "name": "सि.एफ.सी १ पिस", "price": "180", "isSpecial": false },
+          { "name": "सि.एफ.सी २ पिस", "price": "340", "isSpecial": false },
+          { "name": "सि.एफ.सी ४ पिस", "price": "625", "isSpecial": false },
+          { "name": "सि.एफ.सी ८ पिस", "price": "1130", "isSpecial": false },
+          { "name": "चिकेन स्ट्रिप्स", "price": "365", "isSpecial": false },
+          { "name": "हट विङ्ग्स ६ पिस", "price": "350", "isSpecial": false },
+          {
+            "name": "चिकेन ड्रमस्टिक्स ६ पिस",
+            "price": "350",
+            "isSpecial": false
+          },
+          { "name": "चिकेन पपकर्न", "price": "365", "isSpecial": false },
+          {
+            "name": "ग्रिल चिकेन (आधा / १ केजी)",
+            "price": "550 / 1100",
+            "isSpecial": true
+          }
+        ]
+      },
+      {
+        "id": "burgers",
+        "title": "बर्गर",
+        "items": [
+          { "name": "भेज बर्गर", "price": "160", "isSpecial": false },
+          { "name": "ह्याम बर्गर", "price": "170", "isSpecial": false },
+          { "name": "चिकेन बर्गर", "price": "180", "isSpecial": false },
+          {
+            "name": "भेज बर्गर (फ्रेन्च फ्राई सहित)",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "ह्याम बर्गर (फ्रेन्च फ्राई सहित)",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन बर्गर (फ्रेन्च फ्राई सहित)",
+            "price": "210",
+            "isSpecial": false
+          },
+          { "name": "क्रन्ची चिकेन बर्गर", "price": "250", "isSpecial": true },
+          { "name": "ग्रिल्ड चिकेन बर्गर", "price": "250", "isSpecial": true },
+          { "name": "थप चिज", "price": "70", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "pizza",
+        "title": "पिज्जा",
+        "items": [
+          {
+            "name": "चिज पिज्जा (M / L)",
+            "price": "370 / 700",
+            "isSpecial": false
+          },
+          {
+            "name": "भेजिटेबल पिज्जा (M / L)",
+            "price": "370 / 700",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन पिज्जा (M / L)",
+            "price": "400 / 800",
+            "isSpecial": false
+          },
+          {
+            "name": "मसरुम पिज्जा (M / L)",
+            "price": "410 / 750",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन मसरुम पिज्जा (M / L)",
+            "price": "425 / 850",
+            "isSpecial": false
+          },
+          {
+            "name": "बफ सलामी पिज्जा (M / L)",
+            "price": "425 / 850",
+            "isSpecial": false
+          },
+          {
+            "name": "मिक्स पिज्जा (M / L)",
+            "price": "450 / 900",
+            "isSpecial": false
+          },
+          {
+            "name": "चिली चिकेन डोनर पिज्जा (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          {
+            "name": "चिकेन ब्लास्ट पिज्जा (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          {
+            "name": "बटर चिकेन डिलाइट पिज्जा (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          { "name": "थप चिज", "price": "180", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "momos",
+        "title": "मोमो",
+        "items": [
+          { "name": "भेज स्टिम मोमो", "price": "140", "isSpecial": false },
+          { "name": "भेज फ्राई मोमो", "price": "150", "isSpecial": false },
+          {
+            "name": "भेज कोथे / झोल",
+            "price": "150 / 150",
+            "isSpecial": false
+          },
+          { "name": "बफ स्टिम मोमो", "price": "170", "isSpecial": false },
+          { "name": "बफ फ्राई मोमो", "price": "180", "isSpecial": false },
+          { "name": "बफ कोथे / झोल", "price": "180 / 190", "isSpecial": false },
+          { "name": "चिकेन स्टिम मोमो", "price": "180", "isSpecial": false },
+          { "name": "चिकेन फ्राई मोमो", "price": "190", "isSpecial": false },
+          {
+            "name": "चिकेन कोथे / झोल",
+            "price": "190 / 200",
+            "isSpecial": false
+          },
+          { "name": "सि मोमो (चिकेन)", "price": "230", "isSpecial": true },
+          { "name": "साधेको मोमो (चिकेन)", "price": "210", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "chowmein-rice",
+        "title": "चाउमिन र राइस",
+        "items": [
+          { "name": "भेज चाउमिन / थुक्पा", "price": "150", "isSpecial": false },
+          { "name": "बफ चाउमिन / थुक्पा", "price": "170", "isSpecial": false },
+          {
+            "name": "अण्डा चाउमिन / थुक्पा",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन चाउमिन / थुक्पा",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "मिक्स चाउमिन / थुक्पा",
+            "price": "220",
+            "isSpecial": false
+          },
+          { "name": "सिंगापुर चाउमिन", "price": "250", "isSpecial": true },
+          {
+            "name": "स्पाइसी तिब्बतीयन नुडल्स",
+            "price": "250",
+            "isSpecial": true
+          },
+          { "name": "सादा भात", "price": "150", "isSpecial": false },
+          { "name": "भेज फ्राईड राइस", "price": "170", "isSpecial": false },
+          { "name": "बफ फ्राईड राइस", "price": "240", "isSpecial": false },
+          { "name": "अण्डा फ्राईड राइस", "price": "200", "isSpecial": false },
+          { "name": "चिकेन फ्राईड राइस", "price": "250", "isSpecial": false },
+          { "name": "मिक्स फ्राईड राइस", "price": "280", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "spring-roll-wrap",
+        "title": "रोल र र्‍याप",
+        "items": [
+          { "name": "भेज स्प्रिङ्ग रोल", "price": "185", "isSpecial": false },
+          { "name": "बफ स्प्रिङ्ग रोल", "price": "210", "isSpecial": false },
+          { "name": "चिकेन स्प्रिङ्ग रोल", "price": "220", "isSpecial": false },
+          { "name": "पनिर र्‍याप", "price": "220", "isSpecial": false },
+          { "name": "बफ र्‍याप", "price": "230", "isSpecial": false },
+          { "name": "चिकेन र्‍याप", "price": "240", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "chopsuey-pasta",
+        "title": "चप्सुई र पास्ता",
+        "items": [
+          { "name": "भेज चप्सुई", "price": "210", "isSpecial": false },
+          { "name": "चिकेन चप्सुई", "price": "245", "isSpecial": false },
+          { "name": "चाइनिज चप्सुई", "price": "270", "isSpecial": false },
+          {
+            "name": "अमेरिकन चप्सुई (भेज)",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "अमेरिकन चप्सुई (नन्-भेज)",
+            "price": "290",
+            "isSpecial": false
+          },
+          {
+            "name": "पास्ता पेन्ने टोमाटो सस",
+            "price": "340",
+            "isSpecial": false
+          },
+          {
+            "name": "पास्ता पेन्ने क्रिम सस",
+            "price": "390",
+            "isSpecial": false
+          },
+          {
+            "name": "पास्ता चिकेन पिङ्क सस",
+            "price": "400",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "biryani-sizzler",
+        "title": "बिरयानी र सिज्लर",
+        "items": [
+          { "name": "भेज बिरयानी", "price": "300", "isSpecial": false },
+          { "name": "चिकेन बिरयानी", "price": "350", "isSpecial": false },
+          { "name": "मड्का फ्राई बिरयानी", "price": "500", "isSpecial": true },
+          {
+            "name": "मड्का फ्राई बिरयानी (सिज्लिङ्ग फायर सहित)",
+            "price": "550",
+            "isSpecial": true
+          },
+          { "name": "भेज सिज्लर", "price": "340", "isSpecial": false },
+          { "name": "चिकेन सिज्लर", "price": "450", "isSpecial": false },
+          { "name": "फिस सिज्लर", "price": "470", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "main-course-curry",
+        "title": "मेन कोर्स",
+        "items": [
+          {
+            "name": "इन्डियन बटर चिकेन राइस",
+            "price": "500",
+            "isSpecial": true
+          },
+          { "name": "फिस एण्ड चिप्स", "price": "550", "isSpecial": true },
+          { "name": "भेज मन्चुरियन", "price": "280", "isSpecial": false },
+          {
+            "name": "चिकेन / फिस मन्चुरियन",
+            "price": "350",
+            "isSpecial": false
+          },
+          { "name": "चिकेन करी", "price": "350", "isSpecial": false },
+          { "name": "कढाई चिकेन", "price": "370", "isSpecial": false },
+          {
+            "name": "हाण्डी चिकेन / मड्का सहित",
+            "price": "400 / 500",
+            "isSpecial": false
+          },
+          { "name": "पनिर बटर मसला", "price": "350", "isSpecial": false },
+          { "name": "मिक्स भेज करी", "price": "300", "isSpecial": false },
+          { "name": "मसरुम मसला", "price": "300", "isSpecial": false },
+          {
+            "name": "प्राउन (गोल्डेन फ्राई/चिली/ग्रिल्ड)",
+            "price": "640",
+            "isSpecial": true
+          },
+          { "name": "स्निट्जेल चिकेन", "price": "450", "isSpecial": true },
+          { "name": "सेफ पेकिङ चिकेन", "price": "500", "isSpecial": true },
+          { "name": "स्मोकी चिकेन", "price": "550", "isSpecial": true }
+        ]
+      },
+      {
+        "id": "sekuwa-chhoila-fish",
+        "title": "सेकुवा र माछा",
+        "items": [
+          { "name": "चिकेन सेकुवा", "price": "300", "isSpecial": false },
+          { "name": "बफ सेकुवा", "price": "290", "isSpecial": false },
+          { "name": "पोर्क सेकुवा", "price": "300", "isSpecial": false },
+          { "name": "मसरुम छोइला", "price": "280", "isSpecial": false },
+          {
+            "name": "बफ / चिकेन / पोर्क छोइला",
+            "price": "350",
+            "isSpecial": false
+          },
+          { "name": "फिस फ्राईड", "price": "410", "isSpecial": false },
+          { "name": "फिस फिङ्गर", "price": "410", "isSpecial": false },
+          { "name": "फिस चिली", "price": "410", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "snacks",
+        "title": "खाजा",
+        "items": [
+          { "name": "फ्रेन्च फ्राई", "price": "170", "isSpecial": false },
+          { "name": "पेरि पेरि फ्राई", "price": "220", "isSpecial": false },
+          { "name": "पोटेटो वेज", "price": "180", "isSpecial": false },
+          { "name": "मुस्ताङ आलु", "price": "200", "isSpecial": true },
+          { "name": "चिप्स चिली", "price": "220", "isSpecial": false },
+          { "name": "पनिर चिली", "price": "300", "isSpecial": false },
+          { "name": "मसरुम चिली", "price": "250", "isSpecial": false },
+          { "name": "बफ चिली", "price": "300", "isSpecial": false },
+          { "name": "चिकेन चिली", "price": "360", "isSpecial": false },
+          { "name": "पोर्क चिली", "price": "330", "isSpecial": false },
+          { "name": "बफेलो विङ्ग्स ६ पिस", "price": "360", "isSpecial": false },
+          { "name": "चिकेन तास", "price": "350", "isSpecial": false },
+          { "name": "बफ तास", "price": "320", "isSpecial": false },
+          { "name": "सुकुटी साधेको", "price": "280", "isSpecial": false },
+          { "name": "आलु साधेको", "price": "200", "isSpecial": false },
+          { "name": "बदाम साधेको", "price": "180", "isSpecial": false },
+          { "name": "काजु साधेको / फ्राई", "price": "400", "isSpecial": false },
+          { "name": "पनिर पकौडा", "price": "300", "isSpecial": false },
+          { "name": "प्याज / भेज पकौडा", "price": "180", "isSpecial": false },
+          {
+            "name": "फ्राईड / मसला पापड",
+            "price": "60 / 110",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "boil-healthy",
+        "title": "स्वस्थ उसिनेको",
+        "items": [
+          { "name": "मिक्स भेज बोइल", "price": "240", "isSpecial": false },
+          { "name": "मिक्स नन्-भेज बोइल", "price": "350", "isSpecial": false },
+          {
+            "name": "बफ ससेज बोइल (५ पिस)",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन ससेज बोइल (५ पिस)",
+            "price": "350",
+            "isSpecial": false
+          },
+          { "name": "चिकेन बोइल", "price": "300", "isSpecial": false },
+          { "name": "पोर्क बोइल", "price": "300", "isSpecial": false },
+          { "name": "हरियो केराउ बोइल", "price": "130", "isSpecial": false },
+          { "name": "हरियो केराउ साधेको", "price": "130", "isSpecial": false },
+          { "name": "हरियो केराउ फ्राई", "price": "150", "isSpecial": false },
+          { "name": "स्वीट कर्न साधेको", "price": "180", "isSpecial": false },
+          { "name": "स्वीट कर्न फ्राई", "price": "200", "isSpecial": false },
+          { "name": "भटमास साधेको", "price": "160", "isSpecial": false },
+          { "name": "लसुन पोलेको", "price": "150", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "soup-sandwich",
+        "title": "सूप र स्यान्डविच",
+        "items": [
+          { "name": "भेज सूप", "price": "160", "isSpecial": false },
+          { "name": "चिकेन सूप", "price": "180", "isSpecial": false },
+          { "name": "मसरुम सूप", "price": "180", "isSpecial": false },
+          { "name": "चिकेन मसरुम सूप", "price": "200", "isSpecial": false },
+          { "name": "हट एण्ड सावर सूप", "price": "250", "isSpecial": false },
+          { "name": "चिकेन मन्चुरियन सूप", "price": "200", "isSpecial": false },
+          {
+            "name": "चिकेन स्वीट कर्न सूप",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "भेज स्यान्डविच (फ्रेन्च फ्राई सहित)",
+            "price": "165",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन स्यान्डविच (फ्रेन्च फ्राई सहित)",
+            "price": "195",
+            "isSpecial": false
+          },
+          {
+            "name": "चिज स्यान्डविच (फ्रेन्च फ्राई सहित)",
+            "price": "215",
+            "isSpecial": false
+          },
+          {
+            "name": "क्लब स्यान्डविच (फ्रेन्च फ्राई सहित)",
+            "price": "295",
+            "isSpecial": false
+          },
+          {
+            "name": "बफ हट डग (फ्रेन्च फ्राई सहित)",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "चिकेन हट डग (फ्रेन्च फ्राई सहित)",
+            "price": "195",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "breakfast",
+        "title": "ब्रेकफास्ट",
+        "items": [
+          { "name": "सादा टोस्ट", "price": "120", "isSpecial": false },
+          { "name": "बटर टोस्ट", "price": "150", "isSpecial": false },
+          { "name": "अम्लेट टोस्ट", "price": "150", "isSpecial": false },
+          { "name": "मसला अम्लेट र टोस्ट", "price": "150", "isSpecial": false },
+          { "name": "मसला अम्लेट", "price": "100", "isSpecial": false },
+          { "name": "उसिनेको अण्डा", "price": "50", "isSpecial": false },
+          { "name": "एग पाउच", "price": "60", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "hot-coffee",
+        "title": "तातो कफी",
+        "items": [
+          {
+            "name": "एस्प्रेसो (सिंगल / डबल)",
+            "price": "130 / 140",
+            "isSpecial": false
+          },
+          {
+            "name": "एस्प्रेसो म्याकियाटो (सिंगल / डबल)",
+            "price": "140 / 185",
+            "isSpecial": false
+          },
+          {
+            "name": "अमेरिकानो (सिंगल / डबल)",
+            "price": "130 / 140",
+            "isSpecial": false
+          },
+          { "name": "फ्लेभर्ड अमेरिकानो", "price": "180", "isSpecial": false },
+          { "name": "एस्प्रेसो अफोगाटो", "price": "170", "isSpecial": false },
+          { "name": "क्याफे लाट्टे", "price": "160", "isSpecial": false },
+          { "name": "फ्लेभर्ड लाट्टे", "price": "190", "isSpecial": false },
+          { "name": "कारामेल लाट्टे", "price": "190", "isSpecial": false },
+          { "name": "हनी लाट्टे", "price": "190", "isSpecial": false },
+          { "name": "क्यापुचिनो", "price": "170", "isSpecial": false },
+          { "name": "फ्लेभर्ड क्यापुचिनो", "price": "190", "isSpecial": false },
+          { "name": "मोकाचिनो", "price": "190", "isSpecial": false },
+          { "name": "क्याफे मोका", "price": "180", "isSpecial": false },
+          { "name": "मोका म्याडनेस", "price": "200", "isSpecial": true },
+          { "name": "कारामेल म्याकियाटो", "price": "190", "isSpecial": false },
+          { "name": "हट चकलेट", "price": "180", "isSpecial": false },
+          { "name": "ग्रिन टी", "price": "90", "isSpecial": false },
+          { "name": "तातो कागती", "price": "70", "isSpecial": false },
+          {
+            "name": "मह सहितको तातो कागती",
+            "price": "110",
+            "isSpecial": false
+          },
+          {
+            "name": "फ्लेभर्ड स्टिम मिल्क",
+            "price": "100",
+            "isSpecial": false
+          },
+          { "name": "कालो चिया", "price": "50", "isSpecial": false },
+          { "name": "दूध चिया", "price": "70", "isSpecial": false }
+        ]
+      },
+      {
+        "id": "cold-drinks",
+        "title": "चिसो पेय पदार्थ",
+        "items": [
+          { "name": "आइस अमेरिकानो", "price": "150", "isSpecial": false },
+          {
+            "name": "आइस लाट्टे / क्यापुचिनो",
+            "price": "170",
+            "isSpecial": false
+          },
+          { "name": "आइस फ्लेभर्ड लाट्टे", "price": "190", "isSpecial": false },
+          {
+            "name": "आइस फ्लेभर्ड लाट्टे / क्यापुचिनो",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "आइस कारामेल म्याकियाटो",
+            "price": "210",
+            "isSpecial": false
+          },
+          { "name": "आइस मोका", "price": "210", "isSpecial": false },
+          { "name": "आइस मोका म्याडनेस", "price": "210", "isSpecial": true },
+          {
+            "name": "आइस ब्लेन्डेड फ्याप (सबै फ्लेभर)",
+            "price": "250",
+            "isSpecial": true
+          },
+          { "name": "लेमोनेड", "price": "130", "isSpecial": false },
+          { "name": "पिच आइस टी", "price": "160", "isSpecial": false },
+          { "name": "लेमोनेड आइस टी", "price": "160", "isSpecial": false },
+          { "name": "ब्लेन्डेड लेमोनेड", "price": "200", "isSpecial": false },
+          {
+            "name": "ब्लेन्डेड मिन्ट लेमोनेड",
+            "price": "200",
+            "isSpecial": false
+          },
+          { "name": "मिन्ट लाइम रिफ्रेसर", "price": "170", "isSpecial": false },
+          { "name": "किबी लाइम रिफ्रेसर", "price": "170", "isSpecial": false },
+          { "name": "ब्लु लागून", "price": "180", "isSpecial": false },
+          { "name": "मिन्ट मोजितो", "price": "180", "isSpecial": false },
+          { "name": "ताजा कागती सोडा", "price": "130", "isSpecial": false },
+          { "name": "मसला कोक / स्प्राइट", "price": "130", "isSpecial": false },
+          {
+            "name": "मिल्कसेक (भेनिला/चकलेट/स्ट्रबेरी/ओरियो/कारामेल)",
+            "price": "180",
+            "isSpecial": false
+          },
+          { "name": "आँपको स्मूदी", "price": "220", "isSpecial": false },
+          { "name": "केराको स्मूदी", "price": "220", "isSpecial": false },
+          { "name": "ताजा जुस (सिजनल)", "price": "230", "isSpecial": false },
+          { "name": "सादा / गुलियो लस्सी", "price": "170", "isSpecial": false },
+          { "name": "नुनिलो लस्सी", "price": "170", "isSpecial": false },
+          {
+            "name": "लस्सी (केरा/भेनिला/स्ट्रबेरी/चकलेट)",
+            "price": "190",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "hookah",
+        "title": "हुक्का",
+        "items": [
+          {
+            "name": "हुक्का (कुनै पनि फ्लेभर)",
+            "price": "500",
+            "isSpecial": false
+          },
+          { "name": "क्लाउड हुक्का", "price": "600", "isSpecial": true },
+          { "name": "बिग क्लाउड हुक्का", "price": "800", "isSpecial": true },
+          {
+            "name": "क्लाउड हुक्का कोइल (थप)",
+            "price": "50",
+            "isSpecial": false
+          },
+          { "name": "नि:शुल्क कोइल", "price": "नि:शुल्क", "isSpecial": false }
+        ]
+      }
+    ]
+  },
+  "AboutPage": {
+    "badge": "स्थापना २०२० // लकडाउनको कथा",
+    "titlePart1": "एकान्तमा जन्मिएको,",
+    "titlePart2": "संस्कृतिका लागि बनेको।",
+    "stats": {
+      "lockdown": "लकडाउनको सुरुवात",
+      "delivered": "डेलिभरी गरिएको",
+      "hub": "दमौली केन्द्र"
+    },
+    "narrative": {
+      "titlePart1": "धैर्यता हाम्रो",
+      "titlePart2": "मुख्य विशेषता हो",
+      "p1": "द बर्गर हाउस दमौली कुनै बोर्डरुममा जन्मिएको होइन—यो २०२० को लकडाउनमा बनेको हो। जब संसार रोकिएको थियो, हामीले सुरु गर्यौं। हामीले ती शान्त महिनाहरूमा उत्तम क्रन्च बनाउन र घर-घरमा डेलिभरी गर्ने मोडेल तयार गर्न बितायौं।",
+      "p2": "आज, हामी एक घोस्ट-किचनबाट दमौलीको प्रमुख शहरी ह्याङ्गआउटमा विकसित भएका छौं, तर हाम्रो 'लकडाउन संघर्ष' अझै पनि हाम्रो जगमा छ।",
+      "statusLabel": "सञ्चालन स्थिति",
+      "statusValue": "पहिलो दिन देखि सक्रिय"
+    },
+    "protocolsTitle": "सञ्चालन नियमहरू",
+    "protocolsSubtitle": "हरेक क्षेत्रमा उत्कृष्टताको मानक",
+    "protocols": [
+      {
+        "name": "नियम ०१: गुणस्तर नियन्त्रण",
+        "desc": "खानाको हरेक एकाइको कडा निरीक्षण गरिन्छ। हामी तेलको तापक्रम र सामग्रीको ताजापन निगरानी गर्छौं।",
+        "label": "महत्वपूर्ण"
+      },
+      {
+        "name": "नियम ०२: समुदाय केन्द्र",
+        "desc": "दमौलीले हुर्काएको ब्रान्ड। हामी स्थानीय सामग्री र सामुदायिक प्रतिक्रियालाई प्राथमिकता दिन्छौं।",
+        "label": ""
+      },
+      {
+        "name": "नियम ०३: स्वच्छता अभियान",
+        "desc": "उच्च स्वच्छता मापदण्डहरूमा कुनै सम्झौता हुँदैन। हाम्रो भान्छाले 'शून्य-प्रदूषण' नीति अपनाउँछ।",
+        "label": "महत्वपूर्ण"
+      },
+      {
+        "name": "नियम ०४: स्वादमा शुद्धता",
+        "desc": "हामी रेसिपीहरूलाई कोड जस्तै मान्छौं। हरेक मसलाको अनुपात सही स्वादको लागि मिलाइएको हुन्छ।",
+        "label": ""
+      },
+      {
+        "name": "नियम ०५: ताजापन चक्र",
+        "desc": "दैनिक ताजा तयारी। हामी चिकन र तरकारीको बनावट सधैं ताजा रहने सुनिश्चित गर्छौं।",
+        "label": ""
+      },
+      {
+        "name": "प्रोटोकल ०६: द्रुत परिचालन",
+        "desc": "दक्षता हाम्रो मापक हो। हामी तातोपन र बनावटको गुणस्तर नघटाई प्रतीक्षा समय कम गर्न हाम्रो कार्यप्रवाहलाई अप्टिमाइज गर्छौं।",
+        "label": "प्रणाली"
+      }
+    ],
+    "footer": "द बर्गर हाउस // दमौली शाखा"
   }
 }

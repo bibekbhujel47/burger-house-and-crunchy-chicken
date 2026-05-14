@@ -215,5 +215,1241 @@
     "rights": "All rights reserved.",
     "madeWith": "Crafted with",
     "forDamauli": "for Damauli"
+  },
+  "MenuPage": {
+    "badge": "Freshly Made Daily",
+    "titlePart1": "Our",
+    "titlePart2": "Full Menu",
+    "specialLabel": "SPECIAL",
+    "currency": "Rs.",
+    "footerNote": "All prices are in NPR. Menu subject to change. Free home delivery in Damauli.",
+    "categories": [
+      {
+        "id": "burger-house-special",
+        "title": "BH Special",
+        "items": [
+          {
+            "name": "Chicken Shawarma",
+            "price": "350",
+            "isSpecial": true
+          },
+          {
+            "name": "Crispy Shredded Chicken",
+            "price": "450",
+            "isSpecial": true
+          },
+          {
+            "name": "Dragon Chicken",
+            "price": "450",
+            "isSpecial": true
+          },
+          {
+            "name": "Chicken 65",
+            "price": "450",
+            "isSpecial": true
+          },
+          {
+            "name": "Chatpate",
+            "price": "250",
+            "isSpecial": false
+          },
+          {
+            "name": "Cheese Ball",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Spiral",
+            "price": "450",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Satay",
+            "price": "400",
+            "isSpecial": false
+          },
+          {
+            "name": "Sizzling Wings",
+            "price": "450",
+            "isSpecial": false
+          },
+          {
+            "name": "Kema Noodles",
+            "price": "250",
+            "isSpecial": false
+          },
+          {
+            "name": "Spicy Schezwan Chicken",
+            "price": "450",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "crunchy-fried-chicken",
+        "title": "Fried Chicken",
+        "items": [
+          {
+            "name": "CFC 1 Piece",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "CFC 2 Pieces",
+            "price": "340",
+            "isSpecial": false
+          },
+          {
+            "name": "CFC 4 Pieces",
+            "price": "625",
+            "isSpecial": false
+          },
+          {
+            "name": "CFC 8 Pieces",
+            "price": "1130",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Strips",
+            "price": "365",
+            "isSpecial": false
+          },
+          {
+            "name": "Hot Wings 6 Pcs",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Drumsticks 6 Pcs",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Popcorn",
+            "price": "365",
+            "isSpecial": false
+          },
+          {
+            "name": "Grill Chicken (Half / 1 Kg)",
+            "price": "550 / 1100",
+            "isSpecial": true
+          }
+        ]
+      },
+      {
+        "id": "burgers",
+        "title": "Burgers",
+        "items": [
+          {
+            "name": "Veg Burger",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Ham Burger",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Burger",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Veg Burger (with Fries)",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Ham Burger (with Fries)",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Burger (with Fries)",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Crunchy Chicken Burger",
+            "price": "250",
+            "isSpecial": true
+          },
+          {
+            "name": "Grilled Chicken Burger",
+            "price": "250",
+            "isSpecial": true
+          },
+          {
+            "name": "Additional Cheese",
+            "price": "70",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "pizza",
+        "title": "Pizza",
+        "items": [
+          {
+            "name": "Cheese Pizza (M / L)",
+            "price": "370 / 700",
+            "isSpecial": false
+          },
+          {
+            "name": "Vegetable Pizza (M / L)",
+            "price": "370 / 700",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Pizza (M / L)",
+            "price": "400 / 800",
+            "isSpecial": false
+          },
+          {
+            "name": "Mushroom Pizza (M / L)",
+            "price": "410 / 750",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Mushroom Pizza (M / L)",
+            "price": "425 / 850",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Salami Pizza (M / L)",
+            "price": "425 / 850",
+            "isSpecial": false
+          },
+          {
+            "name": "Mix Pizza (M / L)",
+            "price": "450 / 900",
+            "isSpecial": false
+          },
+          {
+            "name": "Chilly Chicken Dominar Pizza (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          {
+            "name": "Chicken Blast Pizza (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          {
+            "name": "Butter Chicken Delight Pizza (M / L)",
+            "price": "550 / 1000",
+            "isSpecial": true
+          },
+          {
+            "name": "Extra Cheese",
+            "price": "180",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "momos",
+        "title": "Momos",
+        "items": [
+          {
+            "name": "Veg Steam Momo",
+            "price": "140",
+            "isSpecial": false
+          },
+          {
+            "name": "Veg Fried Momo",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Veg Kothey / Jhol",
+            "price": "150 / 150",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Steam Momo",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Fried Momo",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Kothey / Jhol",
+            "price": "180 / 190",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Steam Momo",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Fried Momo",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Kothey / Jhol",
+            "price": "190 / 200",
+            "isSpecial": false
+          },
+          {
+            "name": "C Momo (Chicken)",
+            "price": "230",
+            "isSpecial": true
+          },
+          {
+            "name": "Sandeko Momo (Chicken)",
+            "price": "210",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "chowmein-rice",
+        "title": "Chowmein & Rice",
+        "items": [
+          {
+            "name": "Veg Chowmein / Thukpa",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Chowmein / Thukpa",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Egg Chowmein / Thukpa",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Chowmein / Thukpa",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Mix Chowmein / Thukpa",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Singapore Chowmein",
+            "price": "250",
+            "isSpecial": true
+          },
+          {
+            "name": "Spicy Tibetan Noodles",
+            "price": "250",
+            "isSpecial": true
+          },
+          {
+            "name": "Plain Rice",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Veg Fried Rice",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Fried Rice",
+            "price": "240",
+            "isSpecial": false
+          },
+          {
+            "name": "Egg Fried Rice",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Fried Rice",
+            "price": "250",
+            "isSpecial": false
+          },
+          {
+            "name": "Mixed Fried Rice",
+            "price": "280",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "spring-roll-wrap",
+        "title": "Roll & Wrap",
+        "items": [
+          {
+            "name": "Veg Spring Roll",
+            "price": "185",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Spring Roll",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Spring Roll",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Paneer Wrap",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Wrap",
+            "price": "230",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Wrap",
+            "price": "240",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "chopsuey-pasta",
+        "title": "Chopsuey & Pasta",
+        "items": [
+          {
+            "name": "Veg Chopsuey",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Chopsuey",
+            "price": "245",
+            "isSpecial": false
+          },
+          {
+            "name": "Chinese Chopsuey",
+            "price": "270",
+            "isSpecial": false
+          },
+          {
+            "name": "American Chopsuey (Veg)",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "American Chopsuey (Non-Veg)",
+            "price": "290",
+            "isSpecial": false
+          },
+          {
+            "name": "Pasta Penne Tomato Sauce",
+            "price": "340",
+            "isSpecial": false
+          },
+          {
+            "name": "Pasta Penne Cream Sauce",
+            "price": "390",
+            "isSpecial": false
+          },
+          {
+            "name": "Pasta Chicken Pink Sauce",
+            "price": "400",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "biryani-sizzler",
+        "title": "Biryani & Sizzler",
+        "items": [
+          {
+            "name": "Veg Biryani",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Biryani",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Matka Fry Biryani",
+            "price": "500",
+            "isSpecial": true
+          },
+          {
+            "name": "Matka Fry Biryani (with Sizzling Fire)",
+            "price": "550",
+            "isSpecial": true
+          },
+          {
+            "name": "Veg Sizzler",
+            "price": "340",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Sizzler",
+            "price": "450",
+            "isSpecial": false
+          },
+          {
+            "name": "Fish Sizzler",
+            "price": "470",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "main-course-curry",
+        "title": "Main Course",
+        "items": [
+          {
+            "name": "Indian Butter Chicken Rice",
+            "price": "500",
+            "isSpecial": true
+          },
+          {
+            "name": "Fish & Chips",
+            "price": "550",
+            "isSpecial": true
+          },
+          {
+            "name": "Veg Manchurian",
+            "price": "280",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken / Fish Manchurian",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Curry",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Khadai Chicken",
+            "price": "370",
+            "isSpecial": false
+          },
+          {
+            "name": "Handi Chicken / with Matka",
+            "price": "400 / 500",
+            "isSpecial": false
+          },
+          {
+            "name": "Paneer Butter Masala",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Mix Veg Curry",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Mushroom Masala",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Prawn Golden Fried / Chilly / Grilled",
+            "price": "640",
+            "isSpecial": true
+          },
+          {
+            "name": "Schnitzel Chicken",
+            "price": "450",
+            "isSpecial": true
+          },
+          {
+            "name": "Chef Peking Chicken",
+            "price": "500",
+            "isSpecial": true
+          },
+          {
+            "name": "Smoky Chicken",
+            "price": "550",
+            "isSpecial": true
+          }
+        ]
+      },
+      {
+        "id": "sekuwa-chhoila-fish",
+        "title": "Sekuwa & Fish",
+        "items": [
+          {
+            "name": "Chicken Sekuwa",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Sekuwa",
+            "price": "290",
+            "isSpecial": false
+          },
+          {
+            "name": "Pork Sekuwa",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Mushroom Chhoila",
+            "price": "280",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff / Chicken / Pork Chhoila",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Fish Fried",
+            "price": "410",
+            "isSpecial": false
+          },
+          {
+            "name": "Fish Finger",
+            "price": "410",
+            "isSpecial": false
+          },
+          {
+            "name": "Fish Chilly",
+            "price": "410",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "snacks",
+        "title": "Snacks",
+        "items": [
+          {
+            "name": "French Fries",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Peri Peri Fries",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Potato Wedges",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Mustaang Aalu",
+            "price": "200",
+            "isSpecial": true
+          },
+          {
+            "name": "Chips Chilly",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Paneer Chilly",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Mushroom Chilly",
+            "price": "250",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Chilly",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Chilly",
+            "price": "360",
+            "isSpecial": false
+          },
+          {
+            "name": "Pork Chilly",
+            "price": "330",
+            "isSpecial": false
+          },
+          {
+            "name": "Buffalo Wings 6 Pcs",
+            "price": "360",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Tass",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Tass",
+            "price": "320",
+            "isSpecial": false
+          },
+          {
+            "name": "Sukuti Sandeko",
+            "price": "280",
+            "isSpecial": false
+          },
+          {
+            "name": "Aalu Sandheko",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Peanut Sandheko",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Cashew Nut Sadeko / Fries",
+            "price": "400",
+            "isSpecial": false
+          },
+          {
+            "name": "Paneer Pakauda",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Onion / Veg Pakauda",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Dry Fried / Masala Papad",
+            "price": "60 / 110",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "boil-healthy",
+        "title": "Healthy Boil",
+        "items": [
+          {
+            "name": "Mix Veg Boil",
+            "price": "240",
+            "isSpecial": false
+          },
+          {
+            "name": "Mix Non-Veg Boil",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Sausage Boil (5 Pcs)",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Sausage Boil (5 Pcs)",
+            "price": "350",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Boil",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Pork Boil",
+            "price": "300",
+            "isSpecial": false
+          },
+          {
+            "name": "Green Peas Boil",
+            "price": "130",
+            "isSpecial": false
+          },
+          {
+            "name": "Green Peas Sadako",
+            "price": "130",
+            "isSpecial": false
+          },
+          {
+            "name": "Green Peas Fry",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Sweet Corn Sadeko",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Sweet Corn Fry",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Bhatamas Sadeko",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Lasun Poleko",
+            "price": "150",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "soup-sandwich",
+        "title": "Soup & Sandwich",
+        "items": [
+          {
+            "name": "Veg Soup",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Soup",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Mushroom Soup",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Mushroom Soup",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Hot & Sour Soup",
+            "price": "250",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Manchow Soup",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Sweet Corn Soup",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Veg Sandwich (with Fries)",
+            "price": "165",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Sandwich (with Fries)",
+            "price": "195",
+            "isSpecial": false
+          },
+          {
+            "name": "Cheese Sandwich (with Fries)",
+            "price": "215",
+            "isSpecial": false
+          },
+          {
+            "name": "Club Sandwich (with Fries)",
+            "price": "295",
+            "isSpecial": false
+          },
+          {
+            "name": "Buff Hot Dog (with Fries)",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Chicken Hot Dog (with Fries)",
+            "price": "195",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "breakfast",
+        "title": "Breakfast",
+        "items": [
+          {
+            "name": "Plain Toast",
+            "price": "120",
+            "isSpecial": false
+          },
+          {
+            "name": "Butter Toast",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Omelet Toast",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Masala Omelet with Toast",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Masala Omelet",
+            "price": "100",
+            "isSpecial": false
+          },
+          {
+            "name": "Boil Egg",
+            "price": "50",
+            "isSpecial": false
+          },
+          {
+            "name": "Egg Pouch",
+            "price": "60",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "hot-coffee",
+        "title": "Hot Coffee",
+        "items": [
+          {
+            "name": "Espresso (Single / Double)",
+            "price": "130 / 140",
+            "isSpecial": false
+          },
+          {
+            "name": "Espresso Macchiato (Single / Double)",
+            "price": "140 / 185",
+            "isSpecial": false
+          },
+          {
+            "name": "Americano (Single / Double)",
+            "price": "130 / 140",
+            "isSpecial": false
+          },
+          {
+            "name": "Flavoured Americano",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Espresso Affogato",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Cafe Latte",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Flavoured Latte",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Caramel Latte",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Honey Latte",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Cappuccino",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Flavoured Cappuccino",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Mochaccino",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Cafe Mocha",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Mocha Madness",
+            "price": "200",
+            "isSpecial": true
+          },
+          {
+            "name": "Caramel Macchiato",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Hot Chocolate",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Green Tea",
+            "price": "90",
+            "isSpecial": false
+          },
+          {
+            "name": "Hot Lemon",
+            "price": "70",
+            "isSpecial": false
+          },
+          {
+            "name": "Hot Lemon with Honey",
+            "price": "110",
+            "isSpecial": false
+          },
+          {
+            "name": "Flavoured Steam Milk",
+            "price": "100",
+            "isSpecial": false
+          },
+          {
+            "name": "Black Tea",
+            "price": "50",
+            "isSpecial": false
+          },
+          {
+            "name": "Milk Tea",
+            "price": "70",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "cold-drinks",
+        "title": "Cold Drinks",
+        "items": [
+          {
+            "name": "Iced Americano",
+            "price": "150",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Latte / Cappuccino",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Flavoured Latte",
+            "price": "190",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Flavoured Latte / Cappuccino",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Caramel Macchiato",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Mocha",
+            "price": "210",
+            "isSpecial": false
+          },
+          {
+            "name": "Iced Mocha Madness",
+            "price": "210",
+            "isSpecial": true
+          },
+          {
+            "name": "Ice Blended Frappe (All Flavours)",
+            "price": "250",
+            "isSpecial": true
+          },
+          {
+            "name": "Lemonade",
+            "price": "130",
+            "isSpecial": false
+          },
+          {
+            "name": "Peach Iced Tea",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Lemonade Iced Tea",
+            "price": "160",
+            "isSpecial": false
+          },
+          {
+            "name": "Blended Lemonade",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Blended Mint Lemonade",
+            "price": "200",
+            "isSpecial": false
+          },
+          {
+            "name": "Mint Lime Refresher",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Kiwi Lime Refresher",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Blue Lagoon",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Mint Mojito",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Fresh Lemon Soda",
+            "price": "130",
+            "isSpecial": false
+          },
+          {
+            "name": "Masala Coke / Sprite",
+            "price": "130",
+            "isSpecial": false
+          },
+          {
+            "name": "Vanilla / Chocolate / Strawberry / Oreo / Caramel Milkshake",
+            "price": "180",
+            "isSpecial": false
+          },
+          {
+            "name": "Mango Smoothie",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Banana Smoothie",
+            "price": "220",
+            "isSpecial": false
+          },
+          {
+            "name": "Seasonal Fresh Juice",
+            "price": "230",
+            "isSpecial": false
+          },
+          {
+            "name": "Plain / Sweet Lassi",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Salt Lassi",
+            "price": "170",
+            "isSpecial": false
+          },
+          {
+            "name": "Banana / Vanilla / Strawberry / Chocolate Lassi",
+            "price": "190",
+            "isSpecial": false
+          }
+        ]
+      },
+      {
+        "id": "hookah",
+        "title": "Hookah",
+        "items": [
+          {
+            "name": "Hookah (Any Flavour)",
+            "price": "500",
+            "isSpecial": false
+          },
+          {
+            "name": "Cloud Hookah",
+            "price": "600",
+            "isSpecial": true
+          },
+          {
+            "name": "Big Cloud Hookah",
+            "price": "800",
+            "isSpecial": true
+          },
+          {
+            "name": "Cloud Hookah Coil (Add-on)",
+            "price": "50",
+            "isSpecial": false
+          },
+          {
+            "name": "Free Coil (Add-on)",
+            "price": "Free",
+            "isSpecial": false
+          }
+        ]
+      }
+    ]
+  },
+  "AboutPage": {
+    "badge": "EST. 2020 // THE LOCKDOWN CHRONICLES",
+    "titlePart1": "Born in Isolation,",
+    "titlePart2": "Built for Culture.",
+    "stats": {
+      "lockdown": "Lockdown Origin",
+      "delivered": "Units Delivered",
+      "hub": "Damauli Hub"
+    },
+    "narrative": {
+      "titlePart1": "Resilience is our",
+      "titlePart2": "Main Ingredient",
+      "p1": "The Burger House Damauli wasn't born in a boardroom—it was forged during the 2020 Lockdown. While the world stopped, we started. We spent those quiet months perfecting the ultimate crunch, engineering a delivery-first model that brought comfort to homes when it was needed most.",
+      "p2": "Today, we have evolved from a ghost-kitchen operation into Damauli's premier urban hangout, but our 'Lockdown Hustle' remains at the core of everything we build.",
+      "statusLabel": "Operational Status",
+      "statusValue": "Active Since Day 01"
+    },
+    "protocolsTitle": "Operational Protocols",
+    "protocolsSubtitle": "Standardizing Excellence in Every Sector",
+    "protocols": [
+      {
+        "name": "Protocol 01: Quality Control",
+        "desc": "Every unit of food undergoes a rigorous inspection. We monitor oil temperatures and ingredient freshness to ensure maximum crunch and flavor profile.",
+        "label": "VITAL"
+      },
+      {
+        "name": "Protocol 02: Community Core",
+        "desc": "Born in the lockdown and raised by Damauli. We prioritize local sourcing and community-driven feedback to evolve our menu.",
+        "label": ""
+      },
+      {
+        "name": "Protocol 03: Sterile Ops",
+        "desc": "Advanced hygiene standards are non-negotiable. Our kitchen follows a strict 'Zero-Contamination' policy to keep the community safe and healthy.",
+        "label": "VITAL"
+      },
+      {
+        "name": "Protocol 04: Precision Flavor",
+        "desc": "We treat recipes like code. Each spice ratio is calibrated to deliver a consistent, high-impact taste experience every single time.",
+        "label": ""
+      },
+      {
+        "name": "Protocol 05: Freshness Cycle",
+        "desc": "Zero-overnight policy. We prep daily to ensure that the texture of our chicken and vegetables never hits a 'stale' state.",
+        "label": ""
+      },
+      {
+        "name": "Protocol 06: Rapid Deployment",
+        "desc": "Efficiency is a metric. We optimize our workflow to minimize wait times without compromising the structural integrity of the heat and texture.",
+        "label": "SYSTEM"
+      }
+    ],
+    "footer": "THE BURGER HOUSE // DAMAULI CHAPTER"
   }
 }
