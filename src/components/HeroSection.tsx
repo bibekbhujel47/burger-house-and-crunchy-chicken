@@ -15,6 +15,23 @@ interface HeroSectionProps {
   ctaSecondary: string; // Changed to string
 }
 
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { staggerChildren: 0.15, delayChildren: 0.2 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
+  },
+};
+
 export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
   headline,
@@ -23,23 +40,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   ctaPrimary,
   ctaSecondary,
 }) => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.2 },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] },
-    },
-  };
-
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-zinc-950">
       <motion.div
@@ -82,7 +82,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Headline logic remains the same */}
           <motion.h1
             variants={itemVariants}
-            className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.9] mb-6 tracking-tighter"
+            className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-[1.15] mb-6 tracking-normal"
           >
             {headline.split(".").map((part, i) => (
               <span
