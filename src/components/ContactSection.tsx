@@ -68,7 +68,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
       title: labels.hours,
       value: hours,
       action: labels.actions.menu,
-      link: "",
+      link: "/",
     },
   ];
 

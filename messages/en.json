@@ -133,7 +133,7 @@
         "actions": {
           "maps": "Open in Maps",
           "call": "Call Now",
-          "menu": "View Menu",
+          "menu": "Go to Top",
           "orderBtn": "Order Now"
         }
       }
