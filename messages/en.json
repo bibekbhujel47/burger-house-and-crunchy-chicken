@@ -1450,5 +1450,32 @@
       }
     ],
     "footer": "THE BURGER HOUSE // DAMAULI CHAPTER"
+  },
+  "GalleryPage": {
+    "title": "The Damauli Moments",
+    "subtitle": "Candid Captures",
+    "description": "Step into our world of crunch and joy. Each photo tells a story of a moment shared over a great meal.",
+    "controls": {
+      "close": "Close",
+      "next": "Next Image",
+      "prev": "Previous Image"
+    },
+    "items": {
+      "birthday": "The Birthday Special",
+      "mural": "Buddha Mural",
+      "location": "Our Location",
+      "internal": "Internal Aesthetic",
+      "barista": "Barista Moments",
+      "shake": "Classic Thick Shake",
+      "enjoy": "Night Moments",
+      "coca": "Cocacola Moments",
+      "people": "Friends Hangout",
+      "fries": "Yummy Chicken",
+      "food1": "Tasty Food",
+      "food2": "Tasty Food",
+      "member1": "Our Members",
+      "member3": "Happy Hour",
+      "keema": "Noddles Time"
+    }
   }
 }
