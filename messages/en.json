@@ -1449,7 +1449,12 @@
         "label": "SYSTEM"
       }
     ],
-    "footer": "THE BURGER HOUSE // DAMAULI CHAPTER"
+    "footer": "THE BURGER HOUSE // DAMAULI CHAPTER",
+    "members": {
+      "title": "The Force Behind the Crunch",
+      "subtitle": "Meet Our Dedicated Team",
+      "image": "/crewMember2.webp"
+    }
   },
   "GalleryPage": {
     "title": "The Damauli Moments",
