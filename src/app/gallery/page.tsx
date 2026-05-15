@@ -85,13 +85,6 @@ const IMAGES = [
     key: "member1",
     tall: false,
   },
-
-  {
-    id: 13,
-    src: "/crewMember3.webp",
-    key: "member3",
-    tall: false,
-  },
   {
     id: 14,
     src: "/keemaNoodles.webp",

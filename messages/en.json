@@ -1479,8 +1479,63 @@
       "food1": "Tasty Food",
       "food2": "Tasty Food",
       "member1": "Our Members",
-      "member3": "Happy Hour",
       "keema": "Noddles Time"
+    }
+  },
+  "ContactPage": {
+    "hero": {
+      "badge": "Get in Touch",
+      "title": "Let’s Talk Flavor",
+      "description": "Have a question about our menu, planning a party, or just want to say hi? We're just a message away."
+    },
+    "main": {
+      "badge": "Direct Support",
+      "title": "Chat with our Crew",
+      "description": "The fastest way to reach us is via WhatsApp. Whether it's a takeaway order or a table inquiry, we're ready to help.",
+      "phoneLabel": "Direct Call",
+      "voiceTip": "<strong>Tip:</strong> Send us a <strong>voice note</strong> on WhatsApp if you're in a hurry—we'll listen and reply instantly!"
+    },
+    "whatsappMessages": [
+      {
+        "label": "General Inquiry",
+        "text": "Hi Burger House Damauli! I have a general question."
+      },
+      {
+        "label": "Takeaway Order",
+        "text": "I'd like to place a takeaway order. Can you send the menu?"
+      },
+      {
+        "label": "Party Booking",
+        "text": "I'm interested in hosting a small celebration at your outlet."
+      }
+    ],
+    "location": {
+      "title": "Find Us",
+      "name": "The Burger House & Crunchy Fried Chicken",
+      "address": "Byas-2, Safari Chowk",
+      "district": "Damauli, Tanahun",
+      "country": "Nepal"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "items": [
+        { "label": "Sunday - Friday", "time": "10:00 AM - 09:00 PM" },
+        { "label": "Saturday", "time": "11:00 AM - 10:00 PM" }
+      ]
+    },
+    "info": {
+      "title": "Good to Know",
+      "items": [
+        "Free Wi-Fi available for customers",
+        "Dedicated parking for motorcycles",
+        "Freshly prepared Halal chicken",
+        "Contactless payment via Fonepay"
+      ]
+    },
+    "cta": {
+      "title": "Hungry? Let's fix that.",
+      "description": "Order now and experience the best crunch in Damauli.",
+      "button": "Order via WhatsApp"
     }
   }
 }
