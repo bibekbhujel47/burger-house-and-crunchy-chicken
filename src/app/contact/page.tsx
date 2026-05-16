@@ -98,7 +98,7 @@ export default function ContactPage() {
             {[
               { icon: Phone, label: SITE_DATA.phoneNumber },
               { icon: MapPin, label: "Byas, Damauli" },
-              { icon: Clock, label: "7 AM – 10 PM" },
+              { icon: Clock, label: "9 AM – 9 PM" },
               { icon: Truck, label: "Free Delivery" },
             ].map(({ icon: Icon, label }) => (
               <span

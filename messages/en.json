@@ -123,7 +123,7 @@
       "titleHighlight": "House.",
       "description": "Whether you're craving a late-night burger or planning a rooftop hangout with friends, we're ready to serve you the best vibes in Damauli.",
       "address": "Damauli, Tanahun",
-      "hours": "10:00 AM - 10:00 PM",
+      "hours": "9:00 AM - 9:00 PM",
       "deliveryNote": "Free Delivery within 2km of Damauli Chowk!",
       "labels": {
         "location": "Our Location",
@@ -203,7 +203,7 @@
     "description": "Damauli's favorite spot for premium burgers and the crunchiest fried chicken. Elevating local food to a whole new level.",
     "quick-links": "Quick Nav",
     "contact-us": "Get in Touch",
-    "hours": "10:00 AM - 9:00 PM",
+    "hours": "9:00 AM - 9:00 PM",
     "deliveryNote": "Delivery available within Damauli",
     "phoneNumber": "+977-9814177147",
     "whatsAppCTA": {
@@ -1519,8 +1519,7 @@
     "hours": {
       "title": "Opening Hours",
       "items": [
-        { "label": "Sunday - Friday", "time": "10:00 AM - 09:00 PM" },
-        { "label": "Saturday", "time": "11:00 AM - 10:00 PM" }
+        { "label": "Sunday - Saturday", "time": "9:00 AM - 9:00 PM" }
       ]
     },
     "info": {

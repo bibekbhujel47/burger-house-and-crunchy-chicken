@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Contact Us | The Burger House & Crunchy Fried Chicken - Damauli",
   description:
-    "Get in touch with The Burger House. Call, WhatsApp, or visit us at Byas, Damauli, Tanahun, Nepal. Free delivery available. Open daily 7 AM - 10 PM.",
+    "Get in touch with The Burger House. Call, WhatsApp, or visit us at Byas, Damauli, Tanahun, Nepal. Free delivery available. Open daily 9 AM - 9 PM.",
   keywords: [
     "contact restaurant Damauli",
     "phone number Damauli",
