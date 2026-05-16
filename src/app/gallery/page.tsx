@@ -39,7 +39,7 @@ const IMAGES = [
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1572490122747-3968b75cc699?q=80&w=1000",
+    src: "/friedChicken.webp",
     key: "shake",
     tall: false,
   },

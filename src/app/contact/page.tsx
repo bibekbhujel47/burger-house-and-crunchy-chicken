@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
+import { lazy, Suspense } from "react";
 import {
   MessageCircle,
   Phone,
@@ -11,11 +12,16 @@ import {
   ArrowUpRight,
   Truck,
 } from "lucide-react";
-import { GoogleMapsEmbed } from "@next/third-parties/google";
 import { useTranslations } from "next-intl";
 import { FaWhatsapp } from "react-icons/fa6";
 import SITE_DATA from "@/constants";
 import buildWhatsAppURL from "../utils/whatsApp";
+
+const GoogleMapsEmbed = lazy(() =>
+  import("@next/third-parties/google").then((mod) => ({
+    default: mod.GoogleMapsEmbed,
+  })),
+);
 
 const CARD_META = [
   {
@@ -304,13 +310,21 @@ export default function ContactPage() {
 
               {/* Map embed — taller for better usability */}
               <div className="h-[260px] w-full">
-                <GoogleMapsEmbed
-                  apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
-                  height="260"
-                  width="100%"
-                  mode="place"
-                  q="The+Burger+House+and+Crunchy+Fried+Chicken+Damauli"
-                />
+                <Suspense
+                  fallback={
+                    <div className="h-full bg-gray-100 animate-pulse flex items-center justify-center">
+                      <span className="text-gray-400">Loading map...</span>
+                    </div>
+                  }
+                >
+                  <GoogleMapsEmbed
+                    apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY!}
+                    height="260"
+                    width="100%"
+                    mode="place"
+                    q="The+Burger+House+and+Crunchy+Fried+Chicken+Damauli"
+                  />
+                </Suspense>
               </div>
 
               <div className="bg-bg-offwhite px-6 py-3">

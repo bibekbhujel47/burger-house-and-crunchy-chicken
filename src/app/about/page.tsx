@@ -126,9 +126,9 @@ export default function AboutPage() {
             className="relative aspect-square overflow-hidden rounded-2xl border border-primary/10 bg-white p-4 shadow-xl shadow-primary/5"
           >
             <img
-              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&q=80&w=1200"
-              alt="Kitchen"
-              className="h-full w-full rounded-xl object-cover transition-all duration-700 "
+              src="/locationImg.webp"
+              alt="Our kitchen preparing fresh burgers and fried chicken with quality ingredients"
+              className="h-full w-full rounded-xl object-cover transition-all duration-700"
             />
           </motion.div>
         </div>

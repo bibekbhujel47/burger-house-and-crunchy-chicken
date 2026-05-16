@@ -222,7 +222,7 @@ export default function FullMenuSection() {
                   initial={{ opacity: 0, y: 6 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
-                    delay: Math.min(idx * 0.03, 0.3),
+                    delay: Math.min(idx * 0.06, 0.5),
                     duration: 0.2,
                   }}
                   className="group flex items-center justify-between border-b

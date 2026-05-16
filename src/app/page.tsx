@@ -7,6 +7,46 @@ import { GallerySection } from "@/components/GallerySection";
 import { ContactSection } from "@/components/ContactSection";
 import { useTranslations } from "next-intl";
 import SITE_DATA from "@/constants";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title:
+    "The Burger House & Crunchy Fried Chicken | Best Burgers in Damauli, Nepal",
+  description:
+    "Discover the best burgers, crispy fried chicken, and quick meals in Damauli, Tanahun. Fresh ingredients, fast delivery, and great vibes. Order now or visit us at Byas, Damauli.",
+  keywords: [
+    "burger house Damauli",
+    "crunchy fried chicken Nepal",
+    "restaurant Byas Tanahun",
+    "burger delivery Damauli",
+    "fried chicken takeaway",
+    "fast food Damauli",
+    "food delivery Nepal",
+  ],
+  canonical: "https://theburgerhouse.com",
+  openGraph: {
+    title: "The Burger House & Crunchy Fried Chicken | Damauli",
+    description: "Burgers. Fried Chicken. Good Vibes. — Byas, Damauli, Nepal",
+    type: "website",
+    url: "https://theburgerhouse.com",
+    images: [
+      {
+        url: "https://theburgerhouse.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "The Burger House and Crunchy Fried Chicken",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Burger House & Crunchy Fried Chicken | Damauli",
+    description: "Best burgers and fried chicken in Damauli, Nepal",
+  },
+  alternates: {
+    canonical: "https://theburgerhouse.com",
+  },
+};
 
 // --- COMPONENT ---
 
