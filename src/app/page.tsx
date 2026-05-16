@@ -23,15 +23,14 @@ export const metadata: Metadata = {
     "fast food Damauli",
     "food delivery Nepal",
   ],
-  canonical: "https://theburgerhouse.com",
   openGraph: {
     title: "The Burger House & Crunchy Fried Chicken | Damauli",
     description: "Burgers. Fried Chicken. Good Vibes. — Byas, Damauli, Nepal",
     type: "website",
-    url: "https://theburgerhouse.com",
+    url: "https://burgerhousedamauli.com",
     images: [
       {
-        url: "https://theburgerhouse.com/og-image.png",
+        url: "https://burgerhousedamauli.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "The Burger House and Crunchy Fried Chicken",
@@ -44,7 +43,7 @@ export const metadata: Metadata = {
     description: "Best burgers and fried chicken in Damauli, Nepal",
   },
   alternates: {
-    canonical: "https://theburgerhouse.com",
+    canonical: "https://burgerhousedamauli.com",
   },
 };
 
