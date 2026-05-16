@@ -28,7 +28,7 @@
       "description": "साथीभाइ र परिवारसँग रमाउने उत्कृष्ट ठाउँ। हाम्रो आरामदायी 'विगत एग-चेयर्स' मा झुल्दै होस् वा हाम्रो रुफटप (Rooftop) बाट साँझको शीतल हावा लिँदै, हामी तपाईंलाई एउटा अविस्मरणीय समय प्रदान गर्दछौं।\n\nभित्तामा कोरिएको बुद्धको सुन्दर चित्र र आधुनिक LED लाइटिङले हाम्रो परम्परागत आतिथ्य र आधुनिक सहरी शैलीको सङ्गमलाई झल्काउँछ।",
       "experienceYears": "५+",
       "experienceLabel": "दमौलीमा गुणस्तरीय सेवाको वर्षौंको विश्वास",
-      "image": "https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&q=80&w=1200",
+      "image": "/frontImage.webp",
       "features": [
         "आकर्षक बुद्ध म्युरल इन्टेरियर",
         "आरामदायी विगट एग-चेयर्स",
@@ -47,19 +47,19 @@
           "name": "क्रन्ची बर्गर",
           "description": "हाम्रो विशेष ससको साथमा क्रिस्पी बर्गर।",
           "slug": "burgers",
-          "image": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800"
+          "image": "/crunchyBurger.webp"
         },
         {
           "name": "फ्राइड चिकेन",
           "description": "बाहिर क्रिस्पी, भित्र जुसी - स्थानीयको रोजाइ।",
           "slug": "fried-chicken",
-          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800"
+          "image": "/friedChicken.webp"
         },
         {
           "name": "लोकल स्पेसल",
           "description": "स्थानीय स्वादलाई आधुनिक शैलीमा पस्किएका परिकार।",
           "slug": "local-specials",
-          "image": "https://images.unsplash.com/photo-1589647363585-f4a7d3877b10?q=80&w=800"
+          "image": "/pizza.webp"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "price": "७५०",
           "contents": "चिकेन स्टिम मःमः, चिकेन चाउमिन, चिकेन बर्गर",
           "free": "फ्रेन्च फ्राइज, कोक २५० मि.लि.",
-          "image": "https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?q=80&w=800",
+          "image": "/combo1.webp",
           "isFamily": false
         },
         {
@@ -85,7 +85,7 @@
           "price": "११९९",
           "contents": "हट विङ्स, चिज पिज्जा, चिकेन बर्गर",
           "free": "फ्रेन्च फ्राइज, कोक ५०० मि.लि.",
-          "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=800",
+          "image": "/combo2.webp",
           "isFamily": false
         },
         {
@@ -94,7 +94,7 @@
           "price": "११९९",
           "contents": "चिकेन बिरयानी, चिकेन मःमः, चिज पिज्जा",
           "free": "फ्रेन्च फ्राइज, कोक ५०० मि.लि.",
-          "image": "https://images.unsplash.com/photo-1633945274405-b6c8069047b0?q=80&w=800",
+          "image": "/combo3.webp",
           "isFamily": false
         },
         {
@@ -103,7 +103,7 @@
           "price": "१७५९",
           "contents": "C.F.C. ४ पिस, चिज पिज्जा, चिकेन स्टिम मःमः",
           "free": "फ्रेन्च फ्राइज, कोक जम्बो २ लि.",
-          "image": "https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?q=80&w=800",
+          "image": "/combo4.webp",
           "isFamily": false
         },
         {
@@ -147,7 +147,7 @@
       "imageTag": "दमौली स्ट्यान्डर्ड",
       "images": [
         {
-          "src": "https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=800",
+          "src": "/keemaNoodles.webp",
           "alt": "सिग्नेचर क्रन्ची बर्गर"
         },
         {
@@ -155,7 +155,7 @@
           "alt": "चिजी पिज्जा"
         },
         {
-          "src": "https://images.unsplash.com/photo-1562059390-a761a084768e?q=80&w=800",
+          "src": "/receptionist.webp",
           "alt": "भाइब"
         },
         {
@@ -163,11 +163,11 @@
           "alt": "क्रन्ची फ्राइड चिकेन"
         },
         {
-          "src": "https://images.unsplash.com/photo-1571091718767-18b5b1457add?q=80&w=800",
+          "src": "/aesthetic.webp",
           "alt": "इन्टेरियर"
         },
         {
-          "src": "https://images.unsplash.com/photo-1473093226795-af9932fe5856?q=80&w=800",
+          "src": "/people.webp",
           "alt": "रुफटप भाइब"
         }
       ]
