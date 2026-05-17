@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     "delivery Damauli",
     "restaurant hours",
   ],
+  icons: {
+    icon: "/pizza.webp",
+    shortcut: "/pizza.webp",
+    apple: "/pizza.webp",
+  },
   openGraph: {
     title: "Contact Us | The Burger House & Crunchy Fried Chicken",
     description: "Ready to order? Get our contact info and delivery details.",

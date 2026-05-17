@@ -1518,9 +1518,7 @@
     },
     "hours": {
       "title": "Opening Hours",
-      "items": [
-        { "label": "Sunday - Saturday", "time": "9:00 AM - 9:00 PM" }
-      ]
+      "items": [{ "label": "Sunday - Saturday", "time": "9:00 AM - 9:00 PM" }]
     },
     "info": {
       "title": "Good to Know",
