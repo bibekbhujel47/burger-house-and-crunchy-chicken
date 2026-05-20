@@ -31,7 +31,7 @@ export default function LocaleSwitcher({
   // Trigger button adapts to navbar background
   const triggerClass = isScrolled
     ? "border-primary/20 text-primary hover:border-primary hover:text-primary"
-    : "border-white/40 text-white hover:border-secondary hover:text-secondary";
+    : "border-primary/20 text-primary hover:border-secondary hover:text-secondary";
 
   return (
     <div className="relative">
