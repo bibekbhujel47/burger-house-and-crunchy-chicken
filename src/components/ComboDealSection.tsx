@@ -61,16 +61,10 @@ export function ComboDealSection({
                   alt={pack.title}
                   unoptimized={true}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
-                  /* 
-                    Logic: 
-                    - Mobile: 100vw (Full width)
-                    - Tablet: 50vw (Two columns)
-                    - Desktop (max-w-7xl): ~20vw (The image takes up 2/5ths of one of the two columns)
-                  */
+                  className="object-cover object-left transition-transform duration-700 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 20vw"
                 />
-                <div className="absolute top-4 left-4 z-10 bg-primary text-white font-black px-3 py-1 rounded-lg text-sm shadow-xl transform group-hover:rotate-3 transition-transform">
+                <div className="absolute top-4 right-4 z-10 bg-primary text-white font-black px-3 py-1 rounded-lg text-sm shadow-xl transform group-hover:rotate-3 transition-transform">
                   {currency} {pack.price}
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
