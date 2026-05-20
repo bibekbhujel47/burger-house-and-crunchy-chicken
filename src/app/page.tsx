@@ -59,6 +59,8 @@ export default function Home() {
         headline={t("Hero.headline")}
         subheadline={t("Hero.subheadline")}
         ctaPrimary={t("Hero.ctaPrimary")}
+        orderNow={t("Hero.orderNow")}
+        reserveTable={t("Hero.reserveTable")}
         ctaSecondary={t("Hero.ctaSecondary")}
         bgImage={t("Hero.bgImage")}
       />

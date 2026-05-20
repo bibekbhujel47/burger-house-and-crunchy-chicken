@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "motion/react";
 import { ChevronRight } from "lucide-react";
+import SITE_DATA from "@/constants";
 
 interface HeroSectionProps {
   badge: string;
@@ -13,6 +14,8 @@ interface HeroSectionProps {
   bgImage: string; // Renamed from backgroundImage to match your call
   ctaPrimary: string; // Changed to string to match t("Hero.ctaPrimary")
   ctaSecondary: string; // Changed to string
+  orderNow: string;
+  reserveTable: string;
 }
 
 const containerVariants: Variants = {
@@ -39,6 +42,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   bgImage,
   ctaPrimary,
   ctaSecondary,
+  orderNow,
+  reserveTable,
 }) => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-zinc-950">
@@ -104,7 +109,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
           <motion.div
             variants={itemVariants}
-            className="flex flex-col sm:flex-row gap-4 mb-10"
+            className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10"
           >
             <Link
               href="/menu"
@@ -113,6 +118,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               {ctaPrimary}
               <ChevronRight size={18} />
             </Link>
+
+            <a
+              href={`tel:${SITE_DATA.phoneNumber}`}
+              className="group flex items-center justify-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-emerald-500/20"
+            >
+              {orderNow}
+              <ChevronRight size={18} />
+            </a>
+
+            <a
+              href={`tel:${SITE_DATA.phoneNumber}`}
+              className="group flex items-center justify-center gap-3 bg-emerald-700 hover:bg-emerald-800 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-emerald-700/20"
+            >
+              {reserveTable}
+              <ChevronRight size={18} />
+            </a>
 
             <Link
               href="/contact"
