@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { Gift, Zap } from "lucide-react";
+import { Gift, Zap, BadgePercent } from "lucide-react";
 
 interface ComboItem {
   id: string;
@@ -34,6 +34,10 @@ export function ComboDealSection({
   const standardPacks = combos.filter((item) => !item.isFamily);
   const familyPack = combos.find((item) => item.isFamily);
 
+  const prices = combos.map((c) => parseFloat(c.price));
+  const minPrice = Math.min(...prices);
+  const maxPrice = Math.max(...prices);
+
   return (
     <section className="bg-gradient-to-br from-amber-50 to-orange-50 py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
@@ -45,6 +49,22 @@ export function ComboDealSection({
           <h2 className="text-4xl md:text-6xl font-display font-black text-primary uppercase tracking-tighter">
             {title}
           </h2>
+
+          {/* Price range pill */}
+          <div className="mt-4 inline-flex items-center gap-2 bg-white border border-border rounded-full px-4 py-2 shadow-sm">
+            <BadgePercent size={13} className="text-secondary shrink-0" />
+            <span className="text-[10px] font-black uppercase tracking-widest text-primary/40">
+              Price range
+            </span>
+            <div className="w-px h-3 bg-primary/10" />
+            <span className="text-sm font-black text-primary tracking-tight">
+              {currency} {minPrice}
+            </span>
+            <span className="text-primary/50 text-sm font-bold">—</span>
+            <span className="text-sm font-black text-secondary tracking-tight">
+              {currency} {maxPrice}
+            </span>
+          </div>
         </div>
 
         {/* Grid for Packs 1-4 */}
