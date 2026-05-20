@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useRef } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { useTranslations } from "next-intl";
 import { Search, X, Sparkles } from "lucide-react";
@@ -46,6 +46,7 @@ export default function FullMenuSection() {
     categories[0]?.id ?? "",
   );
   const [query, setQuery] = useState("");
+  const resultsRef = useRef<HTMLDivElement>(null);
 
   const activeCategory = useMemo(
     () => categories.find((c) => c.id === activeCategoryId),
@@ -66,6 +67,18 @@ export default function FullMenuSection() {
   const displayedItems = isSearching
     ? searchResults
     : (activeCategory?.items ?? []);
+
+  const handleCategoryChange = (id: string) => {
+    setActiveCategoryId(id);
+    if (window.innerWidth < 768) {
+      setTimeout(() => {
+        resultsRef.current?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }, 100);
+    }
+  };
 
   return (
     <section className="min-h-screen bg-bg-offwhite px-4 py-20 md:px-8">
@@ -129,8 +142,6 @@ export default function FullMenuSection() {
               </button>
             )}
           </div>
-
-          {/* Bottom accent line — grows on focus */}
           <div
             className="absolute -bottom-px left-0 h-[2px] w-0 rounded-full
                           bg-accent transition-all duration-500
@@ -153,7 +164,7 @@ export default function FullMenuSection() {
                   return (
                     <button
                       key={cat.id}
-                      onClick={() => setActiveCategoryId(cat.id)}
+                      onClick={() => handleCategoryChange(cat.id)}
                       className={`flex items-center gap-1.5 rounded-lg px-3.5 py-2
                                   text-[10px] font-black uppercase tracking-widest
                                   border transition-all duration-200
@@ -188,105 +199,107 @@ export default function FullMenuSection() {
           </p>
         )}
 
-        {/* ── Active category label (when not searching) ───── */}
-        {!isSearching && activeCategory && (
-          <div className="mb-6 flex items-center gap-3">
-            <span className="text-3xl">
-              {CATEGORY_ICONS[activeCategory.id] ?? "🍽️"}
-            </span>
-            <div>
-              <h3 className="text-xl font-black uppercase text-primary">
-                {activeCategory.title}
-              </h3>
-              <p className="text-[10px] font-bold uppercase tracking-widest text-primary/30">
-                {activeCategory.items.length} items available
-              </p>
+        {/* ── Active category label + scroll anchor ────────── */}
+        <div ref={resultsRef} className="scroll-mt-6">
+          {!isSearching && activeCategory && (
+            <div className="mb-6 flex items-center gap-3">
+              <span className="text-3xl">
+                {CATEGORY_ICONS[activeCategory.id] ?? "🍽️"}
+              </span>
+              <div>
+                <h3 className="text-xl font-black uppercase text-primary">
+                  {activeCategory.title}
+                </h3>
+                <p className="text-[10px] font-bold uppercase tracking-widest text-primary/30">
+                  {activeCategory.items.length} items available
+                </p>
+              </div>
             </div>
+          )}
+
+          {/* ── Menu items grid ──────────────────────────────── */}
+          <div className="grid grid-cols-1 gap-x-16 lg:grid-cols-2">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={isSearching ? `search-${query}` : activeCategoryId}
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -8 }}
+                transition={{ duration: 0.2 }}
+                className="contents"
+              >
+                {(displayedItems as any[]).map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 6 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: Math.min(idx * 0.06, 0.5),
+                      duration: 0.2,
+                    }}
+                    className="group flex items-center justify-between border-b
+                               border-primary/8 py-4 transition-all
+                               hover:border-accent/30"
+                  >
+                    {/* Left — name + badges */}
+                    <div className="flex flex-wrap items-center gap-2 pr-4">
+                      <h3
+                        className="text-sm font-bold uppercase text-primary
+                                     transition-colors group-hover:text-accent
+                                     md:text-base"
+                      >
+                        {item.name}
+                      </h3>
+
+                      {item.isSpecial && (
+                        <span
+                          className="flex items-center gap-0.5 rounded bg-accent
+                                         px-1.5 py-0.5 text-[7px] font-black
+                                         italic text-white"
+                        >
+                          <Sparkles size={7} />
+                          {t("specialLabel")}
+                        </span>
+                      )}
+
+                      {isSearching && (item as any).categoryTitle && (
+                        <span
+                          className="rounded border border-primary/10 bg-primary/5
+                                         px-2 py-0.5 text-[8px] font-bold
+                                         uppercase tracking-widest text-primary/30"
+                        >
+                          {(item as any).categoryTitle}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Right — price */}
+                    <div className="flex shrink-0 items-baseline gap-1">
+                      <span className="text-[9px] font-bold uppercase text-primary/30">
+                        {t("currency")}
+                      </span>
+                      <span
+                        className="font-display text-lg font-black italic
+                                       tracking-tight text-primary md:text-xl"
+                      >
+                        {item.price}
+                      </span>
+                    </div>
+                  </motion.div>
+                ))}
+
+                {/* Empty state */}
+                {displayedItems.length === 0 && (
+                  <div className="col-span-2 py-20 text-center">
+                    <p className="text-4xl mb-4">🔍</p>
+                    <p className="text-primary/25 text-sm font-bold uppercase tracking-widest">
+                      Nothing found
+                    </p>
+                  </div>
+                )}
+              </motion.div>
+            </AnimatePresence>
           </div>
-        )}
-
-        {/* ── Menu items grid ──────────────────────────────── */}
-        <div className="grid grid-cols-1 gap-x-16 lg:grid-cols-2">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={isSearching ? `search-${query}` : activeCategoryId}
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2 }}
-              className="contents"
-            >
-              {(displayedItems as any[]).map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{
-                    delay: Math.min(idx * 0.06, 0.5),
-                    duration: 0.2,
-                  }}
-                  className="group flex items-center justify-between border-b
-                             border-primary/8 py-4 transition-all
-                             hover:border-accent/30"
-                >
-                  {/* Left — name + badges */}
-                  <div className="flex flex-wrap items-center gap-2 pr-4">
-                    <h3
-                      className="text-sm font-bold uppercase text-primary
-                                   transition-colors group-hover:text-accent
-                                   md:text-base"
-                    >
-                      {item.name}
-                    </h3>
-
-                    {item.isSpecial && (
-                      <span
-                        className="flex items-center gap-0.5 rounded bg-accent
-                                       px-1.5 py-0.5 text-[7px] font-black
-                                       italic text-white"
-                      >
-                        <Sparkles size={7} />
-                        {t("specialLabel")}
-                      </span>
-                    )}
-
-                    {isSearching && (item as any).categoryTitle && (
-                      <span
-                        className="rounded border border-primary/10 bg-primary/5
-                                       px-2 py-0.5 text-[8px] font-bold
-                                       uppercase tracking-widest text-primary/30"
-                      >
-                        {(item as any).categoryTitle}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Right — price */}
-                  <div className="flex shrink-0 items-baseline gap-1">
-                    <span className="text-[9px] font-bold uppercase text-primary/30">
-                      {t("currency")}
-                    </span>
-                    <span
-                      className="font-display text-lg font-black italic
-                                     tracking-tight text-primary md:text-xl"
-                    >
-                      {item.price}
-                    </span>
-                  </div>
-                </motion.div>
-              ))}
-
-              {/* Empty state */}
-              {displayedItems.length === 0 && (
-                <div className="col-span-2 py-20 text-center">
-                  <p className="text-4xl mb-4">🔍</p>
-                  <p className="text-primary/25 text-sm font-bold uppercase tracking-widest">
-                    Nothing found
-                  </p>
-                </div>
-              )}
-            </motion.div>
-          </AnimatePresence>
         </div>
 
         {/* ── Footer note ──────────────────────────────────── */}
