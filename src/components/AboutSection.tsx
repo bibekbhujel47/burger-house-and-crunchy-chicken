@@ -12,7 +12,7 @@ interface AboutSectionProps {
   image: string;
   experienceYears: string;
   experienceLabel: string;
-  features: string[]; // This will come from t.raw("About.features")
+  features: string[];
 }
 
 export const AboutSection: React.FC<AboutSectionProps> = ({
@@ -27,7 +27,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
   return (
     <section
       id="about"
-      className="py-24 bg-gradient-to-br from-slate-50 to-amber-50 overflow-hidden"
+      className="py-24 bg-gradient-to-br from-slate-50 to-amber-50 overflow-x-clip"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -53,7 +53,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               {description}
             </p>
 
-            {/* Features Grid - Now Dynamic */}
+            {/* Features Grid */}
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 mb-10">
               {features.map((feature, i) => (
                 <motion.li
@@ -79,30 +79,30 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            className="relative pb-10 md:pb-0"
           >
             <div className="absolute -inset-4 bg-secondary/10 rounded-[2rem] -rotate-2" />
             <div className="absolute inset-0 border-2 border-primary/10 rounded-[2rem] rotate-1" />
 
-            <div className="relative z-10 w-full aspect-[4/5] md:aspect-square overflow-hidden rounded-[1.5rem] shadow-2xl">
+            <div className="relative z-10 w-full aspect-video sm:aspect-[4/3] md:aspect-square overflow-hidden rounded-[1.5rem] shadow-2xl">
               <Image
                 src={image}
                 alt="The Burger House Interior vibe"
                 fill
                 unoptimized={true}
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={100}
               />
             </div>
 
-            {/* Floating Experience Badge - Now Dynamic */}
+            {/* Floating Experience Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="absolute -bottom-6 -left-6 md:-bottom-10 md:-left-10 bg-zinc-900 text-white p-6 md:p-8 rounded-2xl z-20 shadow-2xl rotate-3"
+              className="absolute bottom-0 left-2 md:-bottom-10 md:-left-10 bg-zinc-900 text-white p-6 md:p-8 rounded-2xl z-20 shadow-2xl rotate-3"
             >
               <span className="block text-4xl md:text-5xl font-black text-secondary mb-1">
                 {experienceYears}
