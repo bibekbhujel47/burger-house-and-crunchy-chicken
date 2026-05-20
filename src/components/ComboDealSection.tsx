@@ -21,6 +21,8 @@ interface ComboDealSectionProps {
   currency: string;
   plusFreeLabel: string;
   combos: ComboItem[];
+  minPrice: number;
+  maxPrice: number;
 }
 
 export function ComboDealSection({
@@ -30,14 +32,11 @@ export function ComboDealSection({
   currency,
   plusFreeLabel,
   combos,
+  minPrice,
+  maxPrice,
 }: ComboDealSectionProps) {
   const standardPacks = combos.filter((item) => !item.isFamily);
   const familyPack = combos.find((item) => item.isFamily);
-
-  const prices = combos.map((c) => parseFloat(c.price));
-  const minPrice = Math.min(...prices);
-  const maxPrice = Math.max(...prices);
-
   return (
     <section className="bg-gradient-to-br from-amber-50 to-orange-50 py-24 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">

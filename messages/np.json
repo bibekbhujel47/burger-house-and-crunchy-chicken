@@ -117,7 +117,9 @@
           "image": "https://images.unsplash.com/photo-1610057099431-d73a1c9d2f2f?q=80&w=1200",
           "isFamily": true
         }
-      ]
+      ],
+      "min": "७५०",
+      "max": "२३९९"
     },
     "Contact": {
       "badge": "हामीलाई सम्पर्क गर्नुहोस्",

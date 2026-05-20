@@ -96,6 +96,8 @@ export default function Home() {
         plusFreeLabel={t("Combos.plusFree")}
         // t.raw pulls the entire array including our new splash image URLs
         combos={t.raw("Combos.items")}
+        minPrice={t.raw("Combos.min")}
+        maxPrice={t.raw("Combos.max")}
       />
 
       {/* 5. Testimonials Section */}
