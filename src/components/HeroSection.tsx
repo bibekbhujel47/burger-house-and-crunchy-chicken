@@ -11,9 +11,10 @@ interface HeroSectionProps {
   badge: string;
   headline: string;
   subheadline: string;
-  bgImage: string; // Renamed from backgroundImage to match your call
-  ctaPrimary: string; // Changed to string to match t("Hero.ctaPrimary")
-  ctaSecondary: string; // Changed to string
+  bgImage: string;
+  heroImage?: string; // Added prop for your burger image
+  ctaPrimary: string;
+  ctaSecondary: string;
   orderNow: string;
   reserveTable: string;
 }
@@ -35,20 +36,31 @@ const itemVariants: Variants = {
   },
 };
 
+// Animation variants for the food image popping in from the right
+const imageVariants: Variants = {
+  hidden: { opacity: 0, x: 50, scale: 0.95 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    scale: 1,
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 },
+  },
+};
+
 export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
   headline,
   subheadline,
   bgImage,
+  heroImage = "/heroImage.webp", // Defaults to public/heroImage.webp
   ctaPrimary,
   ctaSecondary,
   orderNow,
   reserveTable,
 }) => {
   return (
-    <section 
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 via-amber-50 to-orange-50"
-    >
+    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 via-amber-50 to-orange-50">
+      {/* Background Section */}
       <motion.div
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
@@ -62,89 +74,123 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           priority
           className="object-cover opacity-70"
           quality={100}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 25vw, 20vw"
+          sizes="100vw"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent z-10" />
       </motion.div>
 
+      {/* Main Content Grid */}
       <div className="container relative z-20 mx-auto px-6 pt-32 pb-20">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-4xl"
-        >
-          {/* Dynamic Badge */}
-          <motion.div variants={itemVariants} className="mb-6">
-            <span className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-md border border-primary/30 text-primary px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em]">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
-              </span>
-              {badge}
-            </span>
-          </motion.div>
-
-          {/* Headline logic remains the same */}
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl lg:text-8xl font-black text-primary leading-[1.15] mb-6 tracking-normal"
-          >
-            {headline.split(".").map((part, i) => (
-              <span
-                key={i}
-                className={i % 2 !== 0 ? "text-secondary block" : "block"}
-              >
-                {part.trim()}
-                {i < headline.split(".").length - 1 ? "." : ""}
-              </span>
-            ))}
-          </motion.h1>
-
-          <motion.p
-            variants={itemVariants}
-            className="text-on-surface text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-medium"
-          >
-            {subheadline}
-          </motion.p>
-
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Left Column: Text & CTAs */}
           <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row flex-wrap gap-4 mb-10"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-7 flex flex-col justify-center"
           >
-            <Link
-              href="/menu"
-              className="group relative flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-600/30"
-            >
-              {ctaPrimary}
-              <ChevronRight size={18} />
-            </Link>
+            {/* Dynamic Badge */}
+            <motion.div variants={itemVariants} className="mb-6">
+              <span className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-md border border-primary/30 text-primary px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+                </span>
+                {badge}
+              </span>
+            </motion.div>
 
-            <a
-              href={`tel:${SITE_DATA.phoneNumber}`}
-              className="group flex items-center justify-center gap-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-amber-600/30"
+            {/* Headline */}
+            <motion.h1
+              variants={itemVariants}
+              className="text-5xl md:text-7xl lg:text-8xl font-black text-primary leading-[1.15] mb-6 tracking-normal"
             >
-              {orderNow}
-              <ChevronRight size={18} />
-            </a>
+              {headline.split(".").map((part, i) => (
+                <span
+                  key={i}
+                  className={i % 2 !== 0 ? "text-secondary block" : "block"}
+                >
+                  {part.trim()}
+                  {i < headline.split(".").length - 1 ? "." : ""}
+                </span>
+              ))}
+            </motion.h1>
 
-            <a
-              href={`tel:${SITE_DATA.phoneNumber}`}
-              className="group flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-500/30"
+            {/* Subheadline */}
+            <motion.p
+              variants={itemVariants}
+              className="text-on-surface text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-medium"
             >
-              {reserveTable}
-              <ChevronRight size={18} />
-            </a>
+              {subheadline}
+            </motion.p>
 
-            <Link
-              href="/contact"
-              className="flex items-center justify-center bg-white/40 hover:bg-white/60 border border-primary/30 text-primary px-8 py-4 rounded-2xl font-bold backdrop-blur-md transition-all duration-300"
+            {/* Action Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row flex-wrap gap-4"
             >
-              {ctaSecondary}
-            </Link>
+              <Link
+                href="/menu"
+                className="group relative flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-600/30"
+              >
+                {ctaPrimary}
+                <ChevronRight size={18} />
+              </Link>
+
+              <a
+                href={`tel:${SITE_DATA.phoneNumber}`}
+                className="group flex items-center justify-center gap-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-amber-600/30"
+              >
+                {orderNow}
+                <ChevronRight size={18} />
+              </a>
+
+              <a
+                href={`tel:${SITE_DATA.phoneNumber}`}
+                className="group flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-500/30"
+              >
+                {reserveTable}
+                <ChevronRight size={18} />
+              </a>
+
+              <Link
+                href="/contact"
+                className="flex items-center justify-center bg-white/40 hover:bg-white/60 border border-primary/30 text-primary px-8 py-4 rounded-2xl font-bold backdrop-blur-md transition-all duration-300"
+              >
+                {ctaSecondary}
+              </Link>
+            </motion.div>
           </motion.div>
-        </motion.div>
+
+          {/* Right Column: Burger & Chips Image Placement */}
+          {/* Right Column: Burger & Chips Image Placement */}
+          <motion.div
+            variants={imageVariants}
+            initial="hidden" // Restored to ensure animation plays on large screens
+            animate="visible" // Restored to ensure animation plays on large screens
+            className="
+              hidden lg:block /* added responsive visibility */
+              lg:col-span-5
+              flex justify-center lg:justify-end
+              relative
+              w-full
+              h-[380px]
+              sm:h-[500px]
+              lg:h-[720px]
+            "
+          >
+            <Image
+              src={heroImage}
+              alt="Delicious Burger and Fries"
+              fill
+              priority
+              className="object-contain scale-[1.25] lg:scale-[1.45] lg:translate-x-12"
+              sizes="(max-width: 1024px) 100vw, 48vw"
+              unoptimized
+            />
+          </motion.div>
+        </div>
       </div>
       <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-100 to-transparent z-10" />
     </section>
