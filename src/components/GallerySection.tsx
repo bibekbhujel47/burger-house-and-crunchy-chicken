@@ -33,7 +33,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
   images,
 }) => {
   return (
-    <section className="py-24 bg-zinc-50 overflow-hidden">
+    <section className="py-24 bg-gradient-to-br from-orange-50 to-amber-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Area */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
@@ -42,7 +42,7 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-yellow-600 font-black uppercase tracking-[0.3em] text-xs"
+              className="text-primary font-black uppercase tracking-[0.3em] text-xs"
             >
               {badge}
             </motion.span>
@@ -51,19 +51,19 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black text-zinc-900 mt-4 tracking-tighter leading-none"
+              className="text-5xl md:text-7xl font-black text-primary mt-4 tracking-tighter leading-none"
             >
               {title}
-              <span className="text-zinc-400">{titleHighlight}</span>
+              <span className="text-on-surface-variant">{titleHighlight}</span>
             </motion.h2>
           </div>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex items-center gap-2 text-zinc-900 font-bold"
+            className="flex items-center gap-2 text-on-surface font-bold"
           >
-            <Camera size={20} className="text-yellow-500" />
+            <Camera size={20} className="text-secondary" />
             <span className="tracking-tight">{instagramHandle}</span>
           </motion.div>
         </div>
@@ -96,15 +96,15 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               </div>
 
               {/* Hover Overlay */}
-              <div className="absolute inset-0 bg-zinc-900/40 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center p-8">
+              <div className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 transition-all duration-500 backdrop-blur-[2px] flex items-center justify-center p-8">
                 <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  <div className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mx-auto mb-4 text-black shadow-lg">
+                  <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4 text-white shadow-lg">
                     <Maximize2 size={20} />
                   </div>
                   <p className="text-white font-black text-xl tracking-tight leading-tight">
                     {img.alt}
                   </p>
-                  <span className="text-yellow-400/80 text-[10px] font-bold uppercase tracking-[0.2em] mt-2 block">
+                  <span className="text-secondary/90 text-[10px] font-bold uppercase tracking-[0.2em] mt-2 block">
                     {imageTag}
                   </span>
                 </div>
@@ -127,11 +127,11 @@ export const GallerySection: React.FC<GallerySectionProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               className="
-      group relative flex items-center justify-center gap-3 
-      bg-zinc-900 text-white px-10 py-5 rounded-2xl 
-      font-black uppercase text-[10px] tracking-[0.2em] 
+      group relative flex items-center justify-center gap-3
+      bg-primary text-white px-10 py-5 rounded-2xl
+      font-black uppercase text-[10px] tracking-[0.2em]
       transition-all duration-300 overflow-hidden
-      hover:bg-yellow-400 hover:text-black hover:shadow-xl hover:shadow-yellow-400/20
+      hover:bg-secondary hover:text-on-surface hover:shadow-xl hover:shadow-secondary/20
       active:scale-95 w-full sm:w-max
     "
             >

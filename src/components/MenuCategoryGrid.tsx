@@ -29,7 +29,7 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
   categories,
 }) => {
   return (
-    <section className="py-24 bg-white">
+    <section className="py-24 bg-[#faf6f3]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
@@ -38,7 +38,7 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-yellow-600 font-black uppercase tracking-[0.3em] text-xs"
+              className="text-primary font-black uppercase tracking-[0.3em] text-xs"
             >
               {badge}
             </motion.span>
@@ -47,9 +47,9 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black text-zinc-900 mt-4 tracking-tighter leading-none"
+              className="text-5xl md:text-7xl font-black text-primary mt-4 tracking-tighter leading-none"
             >
-              {titlePart1} <span className="text-zinc-400">{titlePart2}</span>
+              {titlePart1} <span className="text-on-surface-variant">{titlePart2}</span>
             </motion.h2>
           </div>
           <motion.div
@@ -59,7 +59,7 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
           >
             <Link
               href="/menu"
-              className="group flex items-center gap-3 text-zinc-900 font-black uppercase text-xs tracking-widest border-b-2 border-yellow-400 pb-2 hover:text-yellow-600 transition-colors"
+              className="group flex items-center gap-3 text-primary font-black uppercase text-xs tracking-widest border-b-2 border-secondary pb-2 hover:text-secondary transition-colors"
             >
               {viewAllLabel}{" "}
               <ArrowUpRight
@@ -96,14 +96,14 @@ export const MenuCategoryGrid: React.FC<MenuCategoryGridProps> = ({
                   />
                   <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-t from-zinc-900/90 via-zinc-900/20 to-transparent opacity-80" />
                   <div className="absolute inset-0 p-8 flex flex-col justify-end">
-                    <h3 className="text-3xl font-black text-white mb-2 tracking-tight group-hover:text-yellow-400 transition-colors">
+                    <h3 className="text-3xl font-black text-white mb-2 tracking-tight group-hover:text-secondary transition-colors">
                       {cat.name}
                     </h3>
                     <p className="text-zinc-300 text-sm font-medium leading-relaxed max-w-[200px] transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
                       {cat.description}
                     </p>
                   </div>
-                  <div className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/20 group-hover:bg-yellow-400 group-hover:text-black group-hover:border-transparent transition-all duration-300">
+                  <div className="absolute top-6 right-6 w-12 h-12 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center text-white border border-white/20 group-hover:bg-secondary group-hover:text-white group-hover:border-transparent transition-all duration-300">
                     <ArrowUpRight size={20} />
                   </div>
                 </div>

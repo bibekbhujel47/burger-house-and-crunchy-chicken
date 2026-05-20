@@ -53,7 +53,7 @@ export default function Home() {
   const t = useTranslations("HomePage");
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#faf6f3]">
       <HeroSection
         badge={t("Hero.locationBadge")}
         headline={t("Hero.headline")}
@@ -85,7 +85,7 @@ export default function Home() {
         categories={t.raw("Categories.items")}
       />
 
-      <div className="h-px bg-gradient-to-r from-transparent via-gray-200 to-transparent mx-auto max-w-7xl" />
+      <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent mx-auto max-w-7xl" />
 
       {/* 4. Combo Deals Section */}
       <ComboDealSection

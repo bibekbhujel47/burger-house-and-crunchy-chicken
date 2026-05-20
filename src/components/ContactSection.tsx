@@ -73,7 +73,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
   ];
 
   return (
-    <section id="contact" className="py-24 bg-white relative overflow-hidden">
+    <section id="contact" className="py-24 bg-gradient-to-br from-slate-50 to-amber-50 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col lg:flex-row gap-12 items-end mb-16">
           <div className="flex-1">
@@ -81,7 +81,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="text-yellow-600 font-black uppercase tracking-[0.3em] text-xs"
+              className="text-primary font-black uppercase tracking-[0.3em] text-xs"
             >
               {badge}
             </motion.span>
@@ -90,16 +90,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-5xl md:text-7xl font-black text-zinc-900 mt-4 tracking-tighter"
+              className="text-5xl md:text-7xl font-black text-primary mt-4 tracking-tighter"
             >
-              {title} <span className="text-yellow-500">{titleHighlight}</span>
+              {title} <span className="text-secondary">{titleHighlight}</span>
             </motion.h2>
           </div>
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="flex-1 text-zinc-500 text-lg max-w-md"
+            className="flex-1 text-on-surface-variant text-lg max-w-md"
           >
             {description}
           </motion.p>
@@ -116,19 +116,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="bg-zinc-900 group p-8 rounded-[2.5rem] flex flex-col justify-between h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl shadow-zinc-200"
+              className="bg-[#3d2817] group p-8 rounded-[2.5rem] flex flex-col justify-between h-full transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-primary/20 shadow-primary/10"
             >
-              <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-yellow-400 mb-8 group-hover:bg-yellow-400 group-hover:text-black transition-colors duration-300">
+              <div className="w-14 h-14 bg-white/10 rounded-2xl flex items-center justify-center text-secondary mb-8 group-hover:bg-secondary group-hover:text-white transition-colors duration-300">
                 {card.icon}
               </div>
               <div>
-                <h4 className="text-white/50 text-xs font-black uppercase tracking-widest mb-2">
+                <h4 className="text-white/60 text-xs font-black uppercase tracking-widest mb-2">
                   {card.title}
                 </h4>
                 <p className="text-white text-xl font-bold leading-tight mb-6">
                   {card.value}
                 </p>
-                <div className="flex items-center gap-2 text-yellow-400 font-bold text-sm">
+                <div className="flex items-center gap-2 text-secondary font-bold text-sm">
                   {card.action} <ExternalLink size={14} />
                 </div>
               </div>
@@ -141,16 +141,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4 }}
-            className="bg-yellow-400 p-8 rounded-[2.5rem] flex flex-col justify-between border-4 border-zinc-900 shadow-[10px_10px_0px_0px_rgba(24,24,27,1)]"
+            className="bg-primary p-8 rounded-[2.5rem] flex flex-col justify-between border-4 border-secondary shadow-[10px_10px_0px_0px_rgba(212,165,116,1)]"
           >
-            <div className="w-14 h-14 bg-zinc-900 rounded-2xl flex items-center justify-center text-yellow-400 mb-8">
+            <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-primary mb-8">
               <Truck size={28} />
             </div>
             <div>
-              <h4 className="text-zinc-900/50 text-xs font-black uppercase tracking-widest mb-2">
+              <h4 className="text-white/60 text-xs font-black uppercase tracking-widest mb-2">
                 {labels.order}
               </h4>
-              <p className="text-zinc-900 text-xl font-black leading-tight mb-6">
+              <p className="text-white text-xl font-black leading-tight mb-6">
                 {deliveryNote}
               </p>
               <div className="flex w-full justify-center items-center mt-6">
@@ -160,14 +160,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   rel="noopener noreferrer"
                   className="
       group relative flex w-full items-center justify-center gap-2
-      rounded-xl bg-zinc-900 py-4 px-10
-      text-xs font-black uppercase tracking-widest text-white
+      rounded-xl bg-white py-4 px-10
+      text-xs font-black uppercase tracking-widest text-primary
       transition-all duration-300
-      
-      /* The Fix: High-contrast hover colors */
-      hover:bg-[#FFD700] hover:text-black 
-      hover:shadow-[0_0_20px_rgba(255,215,0,0.3)]
-      
+      hover:bg-secondary hover:text-white
+      hover:shadow-[0_0_20px_rgba(212,165,116,0.4)]
       active:scale-95
     "
                 >
@@ -191,7 +188,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
         </div>
       </div>
 
-      <div className="absolute -bottom-10 -right-10 text-[15rem] font-black text-zinc-50 select-none pointer-events-none -z-10 tracking-tighter">
+      <div className="absolute -bottom-10 -right-10 text-[15rem] font-black text-primary/5 select-none pointer-events-none -z-10 tracking-tighter">
         DAMAULI
       </div>
     </section>

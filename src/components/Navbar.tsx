@@ -47,8 +47,8 @@ export default function Navbar() {
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-500 ${
           isScrolled
-            ? "navbar-glass py-0 shadow-sm border-b border-white/5"
-            : "bg-zinc-950 py-2 border-b border-white/10"
+            ? "navbar-glass py-0 shadow-sm border-b border-primary/10"
+            : "bg-gradient-to-r from-slate-50 to-amber-50 py-2 border-b border-primary/8"
         }`}
       >
         <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
@@ -59,7 +59,7 @@ export default function Navbar() {
                 isNepali
                   ? "text-xl tracking-normal normal-case"
                   : "text-xl md:text-2xl tracking-tighter uppercase"
-              } ${isScrolled ? "text-primary" : "text-white"}`}
+              } ${isScrolled ? "text-primary" : "text-primary"}`}
             >
               {t("brandName")
                 .split(" ")
@@ -75,7 +75,7 @@ export default function Navbar() {
                 isNepali
                   ? "text-[10px] tracking-normal"
                   : "text-[10px] md:text-[11px] tracking-[0.22em]"
-              } ${isScrolled ? "text-on-surface-variant" : "text-white/70"}`}
+              } ${isScrolled ? "text-on-surface-variant" : "text-on-surface-variant"}`}
             >
               {t("tagline")}
             </span>
@@ -94,7 +94,7 @@ export default function Navbar() {
                       ? "text-secondary"
                       : isScrolled
                         ? "text-primary hover:text-secondary"
-                        : "text-white hover:text-secondary"
+                        : "text-primary hover:text-secondary"
                   }`}
                 >
                   <span
@@ -120,7 +120,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-2">
             <div
               className={`flex items-center gap-2 border-l pl-4 transition-colors duration-300 ${
-                isScrolled ? "border-primary/15" : "border-white/20"
+                isScrolled ? "border-primary/15" : "border-primary/10"
               }`}
             >
               <a
@@ -128,7 +128,7 @@ export default function Navbar() {
                 className={`group flex items-center gap-2 text-sm font-bold transition-colors duration-200 ${
                   isScrolled
                     ? "text-primary hover:text-secondary"
-                    : "text-white hover:text-secondary"
+                    : "text-primary hover:text-secondary"
                 }`}
               >
                 <Phone size={15} className="text-secondary" />
@@ -155,7 +155,7 @@ export default function Navbar() {
               className={`flex h-9 w-9 items-center justify-center rounded-full transition-all duration-200 ${
                 isScrolled
                   ? "bg-primary/8 text-primary hover:bg-primary/15"
-                  : "bg-white/10 text-white hover:bg-white/20"
+                  : "bg-primary/10 text-primary hover:bg-primary/15"
               }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
