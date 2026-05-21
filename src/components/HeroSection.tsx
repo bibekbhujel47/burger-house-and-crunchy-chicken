@@ -59,26 +59,46 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const headlineParts = headline.split(".").filter((p) => p.trim() !== "");
 
   return (
-    <section className="relative w-full bg-[#F4F1EE] overflow-hidden min-h-screen">
-      <div className="container relative z-20 mx-auto px-6 md:px-12 lg:px-16 min-h-screen flex flex-col justify-center pt-28 pb-16">
-        {/* Layout Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[85vh]">
+    <section className="relative w-full bg-[#F4F1EE] overflow-hidden min-h-screen flex items-center justify-center">
+      {/* Optimized responsive paddings to fit cleanly inside regular viewports */}
+      <div className="container relative z-20 mx-auto px-6 md:px-12 xl:px-16 pt-24 pb-12 lg:py-16">
+        {/* Dynamic Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-8 lg:mb-10"
+        >
+          <span className="inline-flex items-center gap-3 bg-[#fbebeb] border border-[#f3cece] text-[#dc2626] px-5 py-2.5 rounded-full text-[12px] font-black uppercase tracking-[0.15em]">
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
+            </span>
+            {badge}
+          </span>
+        </motion.div>
+
+        {/* Layout Grid: Upgraded breakpoint to xl for side-by-side mode to prevent awkward squeezes */}
+        <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-8 items-center">
           {/* LEFT SIDE: Large Logo Graphic */}
           <motion.div
             variants={logoVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-6 flex justify-center items-center"
+            className="xl:col-span-6 flex justify-center xl:justify-start items-center"
           >
-            <Image
-              src={heroImage}
-              alt="The Burger House"
-              width={700}
-              height={700}
-              priority
-              className="w-full h-auto max-h-[640px] object-contain rounded-3xl"
-              unoptimized
-            />
+            {/* Fluid max-widths to handle middle zooms smoothly */}
+            <div className="relative w-full max-w-[360px] sm:max-w-[420px] md:max-w-[460px] lg:max-w-[500px] xl:max-w-[580px] 2xl:max-w-[660px] xl:-ml-6">
+              <Image
+                src={heroImage}
+                alt="The Burger House"
+                width={650}
+                height={650}
+                priority
+                className="w-full h-auto object-contain"
+                unoptimized
+              />
+            </div>
           </motion.div>
 
           {/* RIGHT SIDE: Typography & Navigation Actions */}
@@ -86,12 +106,12 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-6 flex flex-col justify-center text-left order-2 lg:pl-6"
+            className="xl:col-span-6 flex flex-col justify-center text-left xl:pl-6"
           >
-            {/* Split Colored Headline */}
+            {/* Fixed fluid typographic scaling schema to prevent 4-line wrapping failures */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl sm:text-6xl md:text-7xl xl:text-[84px] font-black leading-[1.1] mb-6 tracking-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[84px] font-black leading-[1.1] mb-5 tracking-tight"
             >
               {headlineParts.map((part, i) => {
                 const isAlternativeColor = i === 1;
@@ -111,7 +131,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* Description Sub-text */}
             <motion.p
               variants={itemVariants}
-              className="text-[#333333] text-lg sm:text-xl mb-10 max-w-xl leading-relaxed font-medium"
+              className="text-[#333333] text-base sm:text-lg lg:text-xl mb-8 max-w-xl leading-relaxed font-medium"
             >
               {subheadline}
             </motion.p>
@@ -119,11 +139,11 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {/* CTA Buttons Block */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center"
+              className="flex flex-col sm:flex-row flex-wrap gap-3 items-stretch sm:items-center"
             >
               <Link
                 href="/menu"
-                className="flex items-center justify-center gap-2 bg-[#d30f0f] hover:bg-[#b50b0b] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-red-700/20 text-base"
+                className="flex items-center justify-center gap-2 bg-[#d30f0f] hover:bg-[#b50b0b] text-white font-bold px-6 py-3.5 rounded-2xl transition-all duration-300 shadow-xl shadow-red-700/20 text-sm sm:text-base whitespace-nowrap"
               >
                 {ctaPrimary}
                 <ChevronRight size={18} />
@@ -131,7 +151,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <a
                 href={`tel:${SITE_DATA.phoneNumber}`}
-                className="flex items-center justify-center gap-2 bg-[#e07300] hover:bg-[#c66500] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-amber-700/20 text-base"
+                className="flex items-center justify-center gap-2 bg-[#e07300] hover:bg-[#c66500] text-white font-bold px-6 py-3.5 rounded-2xl transition-all duration-300 shadow-xl shadow-amber-700/20 text-sm sm:text-base whitespace-nowrap"
               >
                 {orderNow}
                 <ChevronRight size={18} />
@@ -139,7 +159,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <a
                 href={`tel:${SITE_DATA.phoneNumber}`}
-                className="flex items-center justify-center gap-2 bg-[#e31b23] hover:bg-[#ca141b] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-red-600/20 text-base"
+                className="flex items-center justify-center gap-2 bg-[#e31b23] hover:bg-[#ca141b] text-white font-bold px-6 py-3.5 rounded-2xl transition-all duration-300 shadow-xl shadow-red-600/20 text-sm sm:text-base whitespace-nowrap"
               >
                 {reserveTable}
                 <ChevronRight size={18} />
@@ -150,7 +170,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   href={SITE_DATA.burgerHouseGoogleMapLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-7 py-4 rounded-2xl font-bold transition-all duration-300 text-base shadow-sm"
+                  className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-6 py-3.5 rounded-2xl font-bold transition-all duration-300 text-sm sm:text-base shadow-sm whitespace-nowrap"
                 >
                   <MapPin size={18} />
                   {ctaSecondary}
