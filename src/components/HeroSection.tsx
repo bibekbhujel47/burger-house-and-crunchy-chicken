@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "motion/react";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, MapPin } from "lucide-react";
 import SITE_DATA from "@/constants";
 
 interface HeroSectionProps {
@@ -146,12 +146,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </a>
 
               {ctaSecondary && (
-                <Link
-                  href="/contact"
-                  className="flex items-center justify-center bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-7 py-4 rounded-2xl font-bold transition-all duration-300 text-base shadow-sm"
+                <a
+                  href={SITE_DATA.burgerHouseGoogleMapLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-7 py-4 rounded-2xl font-bold transition-all duration-300 text-base shadow-sm"
                 >
+                  <MapPin size={18} />
                   {ctaSecondary}
-                </Link>
+                </a>
               )}
             </motion.div>
           </motion.div>
