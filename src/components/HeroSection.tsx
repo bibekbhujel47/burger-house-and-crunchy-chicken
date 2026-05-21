@@ -12,7 +12,7 @@ interface HeroSectionProps {
   headline: string;
   subheadline: string;
   bgImage: string;
-  heroImage?: string; // Added prop for your burger image
+  heroImage?: string;
   ctaPrimary: string;
   ctaSecondary: string;
   orderNow: string;
@@ -36,14 +36,12 @@ const itemVariants: Variants = {
   },
 };
 
-// Animation variants for the food image popping in from the right
-const imageVariants: Variants = {
-  hidden: { opacity: 0, x: 50, scale: 0.95 },
+const logoVariants: Variants = {
+  hidden: { opacity: 0, scale: 0.95 },
   visible: {
     opacity: 1,
-    x: 0,
     scale: 1,
-    transition: { duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.4 },
+    transition: { duration: 1, ease: [0.16, 1, 0.3, 1], delay: 0.2 },
   },
 };
 
@@ -51,88 +49,82 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
   headline,
   subheadline,
-  bgImage,
-  heroImage = "/heroImage.webp", // Defaults to public/heroImage.webp
+  heroImage = "/heroImage.webp",
   ctaPrimary,
   ctaSecondary,
   orderNow,
   reserveTable,
 }) => {
-  return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-100 via-amber-50 to-orange-50">
-      {/* Background Section */}
-      <motion.div
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 8, ease: "easeOut" }}
-        className="absolute inset-0 z-0"
-      >
-        <Image
-          src={bgImage}
-          alt="Background"
-          fill
-          priority
-          className="object-cover opacity-70"
-          quality={100}
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent z-10" />
-      </motion.div>
+  // Splits text cleanly by "." while preventing empty element arrays
+  const headlineParts = headline.split(".").filter((p) => p.trim() !== "");
 
-      {/* Main Content Grid */}
-      <div className="container relative z-20 mx-auto px-6 pt-32 pb-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Text & CTAs */}
+  return (
+    <section className="relative w-full bg-[#fdfbf7] overflow-hidden min-h-screen">
+      <div className="container relative z-20 mx-auto px-6 md:px-12 lg:px-16 min-h-screen flex flex-col justify-center pt-28 pb-16">
+        {/* Layout Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[85vh]">
+          {/* LEFT SIDE: Large Logo Graphic */}
+          <motion.div
+            variants={logoVariants}
+            initial="hidden"
+            animate="visible"
+            className="lg:col-span-6 flex justify-center items-center relative"
+          >
+            <div className="relative w-full h-[260px] sm:h-[520px] md:h-[620px] lg:h-[620px] xl:h-[680px]">
+              <Image
+                src={heroImage}
+                alt="The Burger House"
+                fill
+                priority
+                className="object-contain scale-[1.35] sm:scale-[1.45] md:scale-[1.2] lg:scale-[1.45] xl:scale-[1.6]"
+                unoptimized
+              />
+            </div>
+          </motion.div>
+
+          {/* RIGHT SIDE: Typography & Navigation Actions */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-7 flex flex-col justify-center"
+            className="lg:col-span-6 flex flex-col justify-center text-left order-2 lg:pl-6"
           >
-            {/* Dynamic Badge */}
-            <motion.div variants={itemVariants} className="mb-6">
-              <span className="inline-flex items-center gap-3 bg-primary/10 backdrop-blur-md border border-primary/30 text-primary px-4 py-2 rounded-full text-[11px] font-bold uppercase tracking-[0.2em]">
-                <span className="relative flex h-2 w-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
-                </span>
-                {badge}
-              </span>
-            </motion.div>
-
-            {/* Headline */}
+            {/* Split Colored Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-7xl lg:text-8xl font-black text-primary leading-[1.15] mb-6 tracking-normal"
+              className="text-5xl sm:text-6xl md:text-7xl xl:text-[84px] font-black leading-[1.1] mb-6 tracking-tight"
             >
-              {headline.split(".").map((part, i) => (
-                <span
-                  key={i}
-                  className={i % 2 !== 0 ? "text-secondary block" : "block"}
-                >
-                  {part.trim()}
-                  {i < headline.split(".").length - 1 ? "." : ""}
-                </span>
-              ))}
+              {headlineParts.map((part, i) => {
+                const isAlternativeColor = i === 1;
+                return (
+                  <span
+                    key={i}
+                    className={`block ${
+                      isAlternativeColor ? "text-[#c29663]" : "text-[#d31111]"
+                    }`}
+                  >
+                    {part.trim()}.
+                  </span>
+                );
+              })}
             </motion.h1>
 
-            {/* Subheadline */}
+            {/* Description Sub-text */}
             <motion.p
               variants={itemVariants}
-              className="text-on-surface text-lg md:text-xl mb-10 max-w-xl leading-relaxed font-medium"
+              className="text-[#333333] text-lg sm:text-xl mb-10 max-w-xl leading-relaxed font-medium"
             >
               {subheadline}
             </motion.p>
 
-            {/* Action Buttons */}
+            {/* CTA Buttons Block */}
             <motion.div
               variants={itemVariants}
-              className="flex flex-col sm:flex-row flex-wrap gap-4"
+              className="flex flex-col sm:flex-row flex-wrap gap-4 items-stretch sm:items-center"
             >
               <Link
                 href="/menu"
-                className="group relative flex items-center justify-center gap-3 bg-red-600 hover:bg-red-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-600/30"
+                className="flex items-center justify-center gap-2 bg-[#d30f0f] hover:bg-[#b50b0b] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-red-700/20 text-base"
               >
                 {ctaPrimary}
                 <ChevronRight size={18} />
@@ -140,7 +132,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <a
                 href={`tel:${SITE_DATA.phoneNumber}`}
-                className="group flex items-center justify-center gap-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-amber-600/30"
+                className="flex items-center justify-center gap-2 bg-[#e07300] hover:bg-[#c66500] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-amber-700/20 text-base"
               >
                 {orderNow}
                 <ChevronRight size={18} />
@@ -148,51 +140,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
               <a
                 href={`tel:${SITE_DATA.phoneNumber}`}
-                className="group flex items-center justify-center gap-3 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-2xl font-black transition-all duration-300 shadow-xl shadow-red-500/30"
+                className="flex items-center justify-center gap-2 bg-[#e31b23] hover:bg-[#ca141b] text-white font-bold px-7 py-4 rounded-2xl transition-all duration-300 shadow-xl shadow-red-600/20 text-base"
               >
                 {reserveTable}
                 <ChevronRight size={18} />
               </a>
 
-              <Link
-                href="/contact"
-                className="flex items-center justify-center bg-white/40 hover:bg-white/60 border border-primary/30 text-primary px-8 py-4 rounded-2xl font-bold backdrop-blur-md transition-all duration-300"
-              >
-                {ctaSecondary}
-              </Link>
+              {ctaSecondary && (
+                <Link
+                  href="/contact"
+                  className="flex items-center justify-center bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 px-7 py-4 rounded-2xl font-bold transition-all duration-300 text-base shadow-sm"
+                >
+                  {ctaSecondary}
+                </Link>
+              )}
             </motion.div>
-          </motion.div>
-
-          {/* Right Column: Burger & Chips Image Placement */}
-          {/* Right Column: Burger & Chips Image Placement */}
-          <motion.div
-            variants={imageVariants}
-            initial="hidden" // Restored to ensure animation plays on large screens
-            animate="visible" // Restored to ensure animation plays on large screens
-            className="
-              hidden lg:block /* added responsive visibility */
-              lg:col-span-5
-              flex justify-center lg:justify-end
-              relative
-              w-full
-              h-[380px]
-              sm:h-[500px]
-              lg:h-[720px]
-            "
-          >
-            <Image
-              src={heroImage}
-              alt="Delicious Burger and Fries"
-              fill
-              priority
-              className="object-contain scale-[1.25] lg:scale-[1.45] lg:translate-x-12"
-              sizes="(max-width: 1024px) 100vw, 48vw"
-              unoptimized
-            />
           </motion.div>
         </div>
       </div>
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-slate-100 to-transparent z-10" />
     </section>
   );
 };
