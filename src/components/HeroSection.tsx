@@ -49,7 +49,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   badge,
   headline,
   subheadline,
-  heroImage = "/heroImage.webp",
+  heroImage = "/heroImg.webp",
   ctaPrimary,
   ctaSecondary,
   orderNow,
@@ -59,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   const headlineParts = headline.split(".").filter((p) => p.trim() !== "");
 
   return (
-    <section className="relative w-full bg-[#fdfbf7] overflow-hidden min-h-screen">
+    <section className="relative w-full bg-[#F4F1EE] overflow-hidden min-h-screen">
       <div className="container relative z-20 mx-auto px-6 md:px-12 lg:px-16 min-h-screen flex flex-col justify-center pt-28 pb-16">
         {/* Layout Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center min-h-[85vh]">
@@ -68,18 +68,17 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             variants={logoVariants}
             initial="hidden"
             animate="visible"
-            className="lg:col-span-6 flex justify-center items-center relative"
+            className="lg:col-span-6 flex justify-center items-center"
           >
-            <div className="relative w-full h-[260px] sm:h-[520px] md:h-[620px] lg:h-[620px] xl:h-[680px]">
-              <Image
-                src={heroImage}
-                alt="The Burger House"
-                fill
-                priority
-                className="object-contain scale-[1.35] sm:scale-[1.45] md:scale-[1.2] lg:scale-[1.45] xl:scale-[1.6]"
-                unoptimized
-              />
-            </div>
+            <Image
+              src={heroImage}
+              alt="The Burger House"
+              width={700}
+              height={700}
+              priority
+              className="w-full h-auto max-h-[640px] object-contain rounded-3xl"
+              unoptimized
+            />
           </motion.div>
 
           {/* RIGHT SIDE: Typography & Navigation Actions */}
