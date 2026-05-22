@@ -62,22 +62,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <section className="relative w-full bg-[#F4F1EE] overflow-hidden min-h-screen flex items-center justify-center">
       {/* Optimized responsive paddings to fit cleanly inside regular viewports */}
       <div className="container relative z-20 mx-auto px-6 md:px-12 xl:px-16 pt-24 pb-12 lg:py-16">
-        {/* Dynamic Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 lg:mb-10"
-        >
-          <span className="inline-flex items-center gap-3 bg-[#fbebeb] border border-[#f3cece] text-[#dc2626] px-5 py-2.5 rounded-full text-[12px] font-black uppercase tracking-[0.15em]">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
-            </span>
-            {badge}
-          </span>
-        </motion.div>
-
         {/* Layout Grid: Upgraded breakpoint to xl for side-by-side mode to prevent awkward squeezes */}
         <div className="grid grid-cols-1 xl:grid-cols-12 gap-10 xl:gap-8 items-center">
           {/* LEFT SIDE: Large Logo Graphic */}
@@ -108,7 +92,20 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             animate="visible"
             className="xl:col-span-6 flex flex-col justify-center text-left xl:pl-6"
           >
-            {/* Fixed fluid typographic scaling schema to prevent 4-line wrapping failures */}
+            {/* Dynamic Badge */}
+            <motion.div
+              variants={itemVariants}
+              className="mb-6"
+            >
+              <span className="inline-flex items-center gap-3 bg-[#fbebeb] border border-[#f3cece] text-[#dc2626] px-5 py-2.5 rounded-full text-[12px] font-black uppercase tracking-[0.15em]">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-red-600" />
+                </span>
+                {badge}
+              </span>
+            </motion.div>
+
             <motion.h1
               variants={itemVariants}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-[84px] font-black leading-[1.1] mb-5 tracking-tight"
